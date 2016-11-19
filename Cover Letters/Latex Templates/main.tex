@@ -1,0 +1,82 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Nick}{Houghton}
+\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\address{2446 Sinclair rd}{V8N1B3 Victoria}{Canada}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1~(250)~893~1988}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{nhoughto5@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{https://ca.linkedin.com/in/nghoughton}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\newcommand{\company}{Ocean Networks}
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{HR Manager}{\company~Canada\\Victoria B.C.}
+%\date{January 01, 1984}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+I would like to submit my application for the Web Service Specialist position advertised.
+
+%I am currently finishing my masters of applied science at the university of Victoria in which my focus has been hardware security which has included FPGA design and assembly programming. My current research focus, under Dr. Fayez Gebali, is the development of FPGA design security in the \textit{Xilinx} tool-chain.. I have worked as a teaching assistant and tutor for \textit{Uvic's} Computer Engineering 255: \textit{Computer Architecture} for which my responsibility was the instruction of students in assembly programming in embedded platforms. During my undergrad I studied hardware design using VHDL for which I worked on multiple designs including a COORDIC algorithm processor.
+%
+%In the final co-op position of my undergrad I worked as a research assistant at \textit{Uvic}. My responsibility was the software, 'proof-of-concept', implementation of a new homomorphic encryption algorithm. My implementation was built using C++ and the openMP API; testing was performed on the \textit{WestGrid} research computing network. During this time I gained viable experience in efficient coding practices and effective use of hardware resources which would prove invaluable to the firmware development team at \company. In addition I have also used C++ in combination with OpenGL to develop animations to simulate real-world physical systems. Graphics programming is a highly complex, resource demanding enterprise which has further honed my hardware oriented programming skills. I am very proficient in web development using C\#, Javascript, HTML and CSS. I am also very familiar with tools such as \textit{Git}, \LaTeX, performance profilers, and integrated development environments such as visual studio and eclipse
+
+
+I have steered my education in the path of gaining the most applicable skills possible precisely for a position such as this. I have always been amazed by the capacity of gaming networks to not only handle such a multitude of requests and data but to do so in such a streamlined manner that the user never notices. Using \textit{java} I developed a distributed system modeling an on-line stock exchange system. The project was focused on scalability; the end result was a an efficient, reliable system capable of processing upwards of thirty-thousand transactions per second. I am very familiar with most Internet protocols; using Kali Linux I have performed penetration testing and network defense on websites, servers and mobile devices. Using the .NET framework, C\#, Javascript and HTML I developed a website which hosts an on-line suite of tools for hardware developers to analyze security risks in their integrated circuits. The website uses the \textit{Entity} framework to communicate with a remote database to store user, application and statistical data. This website is currently hosted on the \textit{Azure Cloud System}. I am also very proficient with C++. I used it to build a 'proof-of-concept' software implementation of a new homomorphic encryption scheme I helped develop with my research group. I have also used C++ in combination with OpenGL to develop animations to simulate real-world physical systems. I have also designed multiple integrated circuits using VHDL. I am also very familiar with tools such as \textit{Git}, \LaTeX, performance profilers, and integrated development environments such as visual studio and eclipse.
+
+I received my bachelor's in engineering, majoring in computer engineering in April of 2015. The development of exceptional software, requires more than just the knowledge of what your code can accomplish. To truly excel a developer must understand what is happening 'under the hood' of their machine. I selected the computer engineering major because I wanted to not only gain the skills of a professional software engineer but to use my understanding of the hardware to stand out as a team member. 
+
+I am a skilled, hard-working developer with experience and knowledge I feel that I can bring to aid \textit{\company} in providing premium service and satisfaction to its customers. I learned the value of a team dynamic while working as a lifeguard and aquatic supervisor during my undergrad. I believe that this experience, my skill set and my reliability would make me a valuable asset to the \textit{\company} team. 
+
+%I am a skilled, hard-working developer with experience and knowledge I feel that I can bring to aid \textit{\company} in developing some of the most unique and advanced devices today. I learned the value of a team dynamic while working as a lifeguard and aquatic supervisor during my undergrad. I believe that this experience, my skill set, and my reliability would make me a valuable asset to the \textit{\company} team. 
+%
+%For this position I would hope to receive a salary in the range of $\$55,000 - \$65,000$ per year however I am very willing to negotiate. 
+
+\makeletterclosing
+
+\end{document}
+
+
+%% end of file `template.tex'.
