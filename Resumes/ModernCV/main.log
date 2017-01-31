@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.27)  31 JAN 2017 07:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.27)  31 JAN 2017 07:47
 entering extended mode
 **main.tex
 (main.tex
@@ -881,19 +881,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--54
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
 
  []
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 82.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 85.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
 
-Overfull \hbox (1.21074pt too wide) in paragraph at lines 92--92
+Overfull \hbox (1.21074pt too wide) in paragraph at lines 95--95
 []\T1/lmss/m/n/10 (-20) Developed an ap-pli-ca-tion which can au-to-mat-i-cally
  de-tect and an-a-lyze hard-ware tro-jans in Field-programmable
  []
@@ -901,35 +901,35 @@ Overfull \hbox (1.21074pt too wide) in paragraph at lines 92--92
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--112
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--121
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
  []
 
 [2] [3]
 
-LaTeX Warning: Citation `book1' on page 4 undefined on input line 189.
+LaTeX Warning: Citation `book1' on page 4 undefined on input line 192.
 
 
 LaTeX Font Warning: Font shape `T1/lmss/sb/n' undefined
-(Font)              using `T1/lmss/m/n' instead on input line 197.
+(Font)              using `T1/lmss/m/n' instead on input line 200.
 
 
-Overfull \hbox (340.59709pt too wide) in paragraph at lines 197--197
+Overfull \hbox (340.59709pt too wide) in paragraph at lines 200--200
 [][][]| 
  []
 
@@ -938,18 +938,18 @@ Overfull \hbox (340.59709pt too wide) in paragraph at lines 197--197
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 223--223
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
 [5
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C601193F110BB4751B9E5B6AF277CBA2;1179.
 
@@ -983,7 +983,7 @@ am Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Program Files/MiKTeX
 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/marvosym/mar
 vosym.pfb>
-Output written on main.pdf (5 pages, 222055 bytes).
+Output written on main.pdf (5 pages, 222176 bytes).
 PDF statistics:
  150 PDF objects out of 1000 (max. 8388607)
  18 named destinations out of 1000 (max. 500000)
