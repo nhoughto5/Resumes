@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.27)  31 JAN 2017 07:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.27)  31 JAN 2017 17:52
 entering extended mode
 **main.tex
 (main.tex
@@ -920,72 +920,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
  []
 
-[2] [3]
-
-LaTeX Warning: Citation `book1' on page 4 undefined on input line 192.
-
+[2]
 
 LaTeX Font Warning: Font shape `T1/lmss/sb/n' undefined
-(Font)              using `T1/lmss/m/n' instead on input line 200.
+(Font)              using `T1/lmss/m/n' instead on input line 153.
 
 
-Overfull \hbox (340.59709pt too wide) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) detected at line 153
+\T1/lmss/m/n/8 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--165
+
+ []
+
+[3]
+Overfull \hbox (304.75247pt too wide) in paragraph at lines 260--260
 [][][]| 
  []
 
-(main.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 226--226
-
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
-[5
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
+(main.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 301.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C601193F110BB4751B9E5B6AF277CBA2;1179.
+(rerunfilecheck)             Checksum: 20E766D6BB455F46011619A4A5171A6C;985.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 18658 strings out of 493698
- 310938 string characters out of 3144415
- 391442 words of memory out of 3000000
+ 18656 strings out of 493698
+ 310958 string characters out of 3144415
+ 392480 words of memory out of 3000000
  21742 multiletter control sequences out of 15000+200000
- 53908 words of font info for 73 fonts, out of 3000000 for 9000
+ 59507 words of font info for 75 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 45i,12n,45p,10356b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fon
-ts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/l
-m-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss1
-7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/marvosym/mar
-vosym.pfb>
-Output written on main.pdf (5 pages, 222176 bytes).
+ 45i,12n,45p,10356b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+ss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/lm/lmss9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/marvosym/marvosym.pfb>
+Output written on main.pdf (4 pages, 177877 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 18529 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 107 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
+ 21057 words of extra memory for PDF output out of 24883 (max. 10000000)
 
