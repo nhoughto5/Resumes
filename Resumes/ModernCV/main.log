@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.27)  31 JAN 2017 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.27)  6 FEB 2017 18:27
 entering extended mode
 **main.tex
 (main.tex
@@ -887,7 +887,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--85
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 85.
+[1
 
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
@@ -898,9 +900,7 @@ Overfull \hbox (1.21074pt too wide) in paragraph at lines 95--95
  de-tect and an-a-lyze hard-ware tro-jans in Field-programmable
  []
 
-[1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 105--105
 
  []
@@ -915,12 +915,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--124
 
  []
 
+[2
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-
- []
-
-[2]
+]
 
 LaTeX Font Warning: Font shape `T1/lmss/sb/n' undefined
 (Font)              using `T1/lmss/m/n' instead on input line 153.
@@ -935,31 +932,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--165
 
  []
 
-[3]
+
 Overfull \hbox (304.75247pt too wide) in paragraph at lines 260--260
 [][][]| 
  []
 
-(main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 301.
- [4]
+[3
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 20E766D6BB455F46011619A4A5171A6C;985.
+(rerunfilecheck)             Checksum: F82711823A9216AAAA43096CDF703D04;759.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 18656 strings out of 493698
- 310958 string characters out of 3144415
- 392480 words of memory out of 3000000
- 21742 multiletter control sequences out of 15000+200000
- 59507 words of font info for 75 fonts, out of 3000000 for 9000
+ 18632 strings out of 493698
+ 310689 string characters out of 3144415
+ 393441 words of memory out of 3000000
+ 21739 multiletter control sequences out of 15000+200000
+ 58765 words of font info for 68 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  45i,12n,45p,10356b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
@@ -971,9 +969,9 @@ ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2
 lic/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on main.pdf (4 pages, 177877 bytes).
+Output written on main.pdf (3 pages, 172718 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
- 21057 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 92 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 21041 words of extra memory for PDF output out of 24883 (max. 10000000)
 
