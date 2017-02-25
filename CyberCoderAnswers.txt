@@ -1,0 +1,23 @@
+
+Please read the job description and tell me why you would be an amazing fit. (Unity)
+=======
+
+I believe that I will make an excellent candidate for this position because I am a very skilled C++ programmer, I am a confident C# developer and am experienced with Unity 5. 
+I have training in graphics rendering and game engine development and am an enthusiastic game developer. 
+I have a demo of one game I developed in my spare time with Unity 5 on my website currently. 
+I am currently working on two 3D games with the Unreal 4 engine but as of yet do not have demos published. 
+I would love to make some demo videos to show you!
+
+Please tell me the details of your most recent salary (base, bonus, commission, etc.) and your ideal salary for this position?
+=======
+My current salary as a java developer is near $70K. I would like to reach $90K for a position such as this.
+
+
+Please explain any Unity development experience.
+=========
+I recently made a 2D space shooter game using unity 5 with C#. Check out my website to find a quick demo.
+
+
+What is your reason for seeking a new opportunity?
+========
+I am looking to enter the gaming industry and am keen on a new adventure.
