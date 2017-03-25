@@ -1,6 +1,10 @@
+Please read the job description and tell me why you would be an amazing fit. (C++)
+==================================================================================
+
+
 
 Please read the job description and tell me why you would be an amazing fit. (Unity)
-=======
+====================================================
 
 I believe that I will make an excellent candidate for this position because I am a very skilled C++ programmer, I am a confident C# developer and am experienced with Unity 5. 
 I have training in graphics rendering and game engine development and am an enthusiastic game developer. 
@@ -8,16 +12,67 @@ I have a demo of one game I developed in my spare time with Unity 5 on my websit
 I am currently working on two 3D games with the Unreal 4 engine but as of yet do not have demos published. 
 I would love to make some demo videos to show you!
 
+
+
+
+Please read the job description and tell me why you would be an amazing fit. (Unreal)
+====================================================
+I have a strong passion for games, animation and virtual reality. 
+Though I have not yet had the pleasure of working in this industry my passion has driven me to investigate, discover and create my own personal projects. 
+I have made several games with the Unreal Engine 4 using C++ and Blueprints, I have made a first person shooter and several physical simulations using OpenGL and have even dabbled in Unity 5.
+
+I have very strong C++ skills. It is my best language. During my masters I took several courses which focused on advanced C++ development. 
+I also wrote the majority of my thesis project in C++. I currently use basic C at my current position to develop device drivers.
+
+I love music, I have played in several bands and have recorded my own album. 
+You can visit my music page on my wesbite: www.nickhoughton.ca
+
+I am extremely skilled in working in both team environments and self-driven atmospheres. 
+I bring out the best in my team to get the job done!
+
+
+
+
+Please describe your UE4 Development experience:
+====================================================
+I am currently  completing the Unreal Engine Developer course on Udemy.com which contains over 200 hours of instruction which includes the completion of 3 full 3D games from beginning to end. 
+I've made several games and have learnt the ins and outs of the engine better than most working developers.
+
+Additionally I am creating a Disc-Golf 3d in my own time. 
+I will post full videos once I have completed the course however I would love to make and send you some interim videos to show you my passion and skill!
+
+
+
+
+
+Please describe your VR development experience:
+====================================================
+I currently do not have any VR development experience but have played with the Oculus SDK a little bit and have investigated VR development with Unreal. 
+I would love to learn and would do everything I needed to be ready for technical interviews for this position.
+
+
+
+
+What is: a) Desired salary for this position? b) Your current/last base salary and total annual compensation including bonuses/commissions? c) Reason for seeking new employment?
+====================================================
+I am currently working for a federal research institute. 
+Though I have learned a lot I am looking to leave because the pay is inadequate and I have a desire to work with games, animation and music!
+
+I am currently earning 60K and would hope to earn over 90K for a position such as this.
+
+
+
+
 Please tell me the details of your most recent salary (base, bonus, commission, etc.) and your ideal salary for this position?
-=======
+=============================================================
 My current salary as a java developer is near $70K. I would like to reach $90K for a position such as this.
 
 
 Please explain any Unity development experience.
-=========
+======================================================
 I recently made a 2D space shooter game using unity 5 with C#. Check out my website to find a quick demo.
 
 
 What is your reason for seeking a new opportunity?
-========
+==================================================
 I am looking to enter the gaming industry and am keen on a new adventure.

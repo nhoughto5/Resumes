@@ -1,0 +1,37 @@
+Interview with: Alex Zaldivar
+
+GLSL is super important:
+======================
+Shader pipeline used to be fixed
+	- Fixed vertex stage performed all per vertex computation
+	- Fixed fragement stage handled interpolation, fog, texture....etc
+	
+Programmable function pipeline
+
+
+About Jib Jab
+============
+Goal is to make people happy.
+
+
+
+Questions
+=========
+
+1.) Why do you want to work at Jib Jab?
+	- Focused on entertainment. Aligns well with personal history (Saints).
+	- Founders were on the tonight show.
+	- Work with advanced technology
+	
+2.) Weakness
+	- Not familiar with webGL.
+	- I'm a big picture guy, I sometimes miss small details but I try to make sure I have a detail oriented person on my team.
+	- Sometimes I try to dive into solving the problem before fully understanding it.
+	- I try to please everyone
+	- I get stressed about missing a deadline.
+	
+3.) Strengths
+	- Extremely good at learning new technologies.
+	- Great at team environemnts.
+	- Determination and Honesty
+	
