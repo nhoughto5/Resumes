@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.6)  25 MAR 2017 09:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.6)  26 MAR 2017 14:20
 entering extended mode
 **./assignment_2.tex
 (assignment_2.tex
@@ -217,42 +217,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--174
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 189.
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--191
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 204.
+
+("D:\Program Files (x86)\MixTex\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 204.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
+
+ []
+
+<Untitled.png, id=15, 1201.48875pt x 571.38469pt>
+File: Untitled.png Graphic file (type png)
+ <use Untitled.png>
+Package pdftex.def Info: Untitled.png used on input line 247.
+(pdftex.def)             Requested size: 469.75499pt x 223.39711pt.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 255.
+
 
 ("D:\Program Files (x86)\MixTex\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [2]
-<example_figure.png, id=14, 150.5625pt x 90.3375pt>
-File: example_figure.png Graphic file (type png)
- <use example_figure.png>
-Package pdftex.def Info: example_figure.png used on input line 216.
-(pdftex.def)             Requested size: 345.2684pt x 207.20255pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 216.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 216.
+)
+Overfull \hbox (14.7096pt too wide) in paragraph at lines 261--262
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
+Overfull \hbox (14.7096pt too wide) in paragraph at lines 274--275
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.7096pt too wide) in paragraph at lines 279--280
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 314--322
+
+ []
+
+[5 <./Untitled.png>] 
 AED: lastpage setting LastPage
-[3 <./example_figure.png>] (assignment_2.aux) ) 
+[6] (assignment_2.aux) ) 
 Here is how much of TeX's memory you used:
- 3565 strings out of 493333
- 51474 string characters out of 3138336
- 236034 words of memory out of 3000000
- 7051 multiletter control sequences out of 15000+200000
- 9401 words of font info for 33 fonts, out of 3000000 for 9000
+ 3629 strings out of 493333
+ 52355 string characters out of 3138336
+ 263034 words of memory out of 3000000
+ 7111 multiletter control sequences out of 15000+200000
+ 9709 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,58p,254b,1172s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files (x86)/MixTex/f
-onts/enc/dvips/base/8r.enc}<D:/Program Files (x86)/MixTex/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb><D:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts
-/cm/cmr10.pfb><D:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmr
-9.pfb><D:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-<D:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Pr
-ogram Files (x86)/MixTex/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on assignment_2.pdf (3 pages, 89671 bytes).
+ 39i,11n,58p,265b,1138s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Program Files (x86)/MixTex/fonts/enc/dvips/base/8r.
+enc}<D:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D
+:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Prog
+ram Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Fil
+es (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files (x86)
+/MixTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files (x86)/MixTe
+x/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files (x86)/MixTex/font
+s/type1/public/amsfonts/cm/cmti12.pfb><D:/Program Files (x86)/MixTex/fonts/type
+1/urw/courier/ucrr8a.pfb>
+Output written on assignment_2.pdf (6 pages, 156038 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
