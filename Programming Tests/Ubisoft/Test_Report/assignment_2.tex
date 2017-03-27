@@ -341,4 +341,89 @@ Some additional code was added to the ``OnMessageHumanStep'' method; when a huma
 This allowed the \textit{Elevators} class to run continuously, handling calls and requests as they came in.
 They system ran successfully handling each new human who arrived.
 
+\subsection{Increased Number of Humans}
+To ramp up the abilities of the system an additional human was added to the ``Humans::Start'' method.
+This immediately showed a flaw; when the first human arrived at their destination the elevator was not being rerouted to pickup the second human.
+This issue was caused by the ``canService'' method.
+When an elevator arrived at the location to pick up the first passenger it caused the ``HasWork'' method to return false because the target and current floors were equal.
+This made the \textit{Elevators} class think that it could remove the second passengers call from the queue. 
+This was incorrect as there was no elevator to service the second call.
+Once the elevator has finished with the first passenger it checked the queue to find it empty.
+
+A solution to this was found by adding an ``onCall'' and ``onRequest'' flag to the \textit{Elevator} class.
+This allowed a check to be implemented to prevent the call queue from being modified when there is no elevator to service the message.
+
+\subsection{Increased number of elevators} 
+When increasing the number of elevators, if the max floor value were all equal the system worked.
+When elevators with different floor counts were created there was an issue with the ``OnMessageElevatorArrived'' and ``OnMessageElevatorRequest'' methods.
+When an elevator arrives it sends a ``MessageElevatorArrived'' object. 
+This object only contains the elevatorId and the floor it has arrived to.
+There is no indication of the maximum floor this elevator can reach.
+In the ``OnMessageElevatorArrived'' method, a human uses the elevator that has arrived to their floor.
+Once inside, they find there is no way to get to their floor. 
+This causes an issue as the human never reaches their destination.
+The only solution which could be found at the time was to add an additional parameter to the ``MessageElevatorArrived'' class.
+A human would only get on the elevator if the available one was able to reach their destination.\newline
+
+This presented a second issue.
+Which elevator would service a call was based upon its availability and its proximity to the human who made the call.
+This decision is not based off of the end destination of the user; it can't be as the destination buttons are within the car of the elevator.
+The consequence is that when an elevator arrives to service a human who wants to go out of the range of that elevator it is now both on the same floor as the human and available.
+All other elevators (who may be able to service the human) are further away.
+Since it is not desirable to add a destination variable to the ``MessageElevatorCall'' class an alternative is needed.
+The best solution is, when a call is made by a human, all elevators who do not have work will have their target floor set to the calling humans floor.
+This way, all available elevators will begin to travel towards the waiting human.
+It was realized that the implementation for this issue was left as a bonus, if there is time it will hopefully be addressed.
+
+Further, an additional bug was found in the ``canService'' method.
+Elevators that began on a floor which already had a call from a human were not having their ``onRequest'' value set properly.
+The consequence of this was that they would complete their first human then never pick up another.
+This was quickly remedied with a simple call to the ``setOnRequest'' method.
+
+\subsection{Code Clean-up And Optimization}
+Donald Knuth, winner of the 1974 Turing award once said that ``premature optimization is the root of all evil''.
+This a sound philosophy which often makes development considerably more enjoyable when followed.
+Once the system was working relatively well it was reviewed for performance and cleanliness.
+Additional comments were added and unit tests were used to ensure proper functionality was maintained.
+By this point of the challenge the 48 hours was running low; code can almost always be better.
+The following is a list of general C++ code facets which were used to ensure a better performance.
+\begin{itemize}
+	\item Use of prefix operators over postfix.
+	\item Use of constructor initialization lists.
+	\item Parameters passed by reference where possible.
+\end{itemize} 
+
+\section{Discussion}
+
+\subsection{Unit Tests}
+Each of the unit tests have been commented out and moved to the bottom of the .cpp file of their respective classes.
+These tests employ the ``Catch'' framework's TEST\_CASE macro which require the catch\_main function to run.
+The catch\_main is a main class within the ``Catch'' framework; when it and the system's main function are both present they are considered overloaded which, of course is not allowed.
+To run the test cases they must be uncommented.
+The main method for the system in main.cpp must be commented out to allow the catch\_main to run.
+Finally, at the top of there is a ``\#define CATCH\_CONFIG\_MAIN'' commented out at the top of main.cpp.
+This as well must be uncommented to run the test cases.
+\subsection{TODO List}
+Throughout development the TODO task list feature of visual studio was used extensively.
+These comments were intentionally left within the source code to give the reviewer a sense of the thought process during development.
+\subsection{Bonus Questions}
+
+\subsubsection{Thread Class Enhancement}
+The current implementation of the threads relies on a timing construct to update the state of the elevators and humans.
+Since elevators take time to move their progress should still be based on time however the processing of input from users and elevators should not be delayed while waiting for the step methods to be run.
+Ideally the worker threads would sleep on their respective condition variables, waiting from input from other entities.
+They currently sleep until a predefined time and then wake to possibly do nothing.
+Both the \textit{Elevators} and \textit{Humans} classes should be given methods which send receive signals via the condition variables.
+
+\subsubsection{Clean Exit}
+
+\subsubsection{Different Sized Buildings}
+During development it was not realized that this feature was a bonus question. 
+An attempt was made to implement a system such that the elevators could have a variable number of floors.
+This would emulate a building where a the primary elevator can not access the penthouse suite while a second secret elevator can.
+It quickly became apparent that the current code would need some restructuring in order to allow this feature.
+First, the messages passed between the human an elevator worker threads would need to change slightly.
+
+
+
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.6)  26 MAR 2017 14:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.6)  26 MAR 2017 21:24
 entering extended mode
 **./assignment_2.tex
 (assignment_2.tex
@@ -274,9 +274,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 314--322
 
  []
 
-[5 <./Untitled.png>] 
+[5 <./Untitled.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 357--367
+
+ []
+
+[6] 
 AED: lastpage setting LastPage
-[6] (assignment_2.aux) ) 
+[7] [8] (assignment_2.aux) ) 
 Here is how much of TeX's memory you used:
  3629 strings out of 493333
  52355 string characters out of 3138336
@@ -285,18 +290,18 @@ Here is how much of TeX's memory you used:
  9709 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,11n,58p,265b,1138s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files (x86)/MixTex/fonts/enc/dvips/base/8r.
-enc}<D:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D
-:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Prog
-ram Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Fil
-es (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files (x86)
-/MixTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files (x86)/MixTe
-x/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files (x86)/MixTex/font
-s/type1/public/amsfonts/cm/cmti12.pfb><D:/Program Files (x86)/MixTex/fonts/type
-1/urw/courier/ucrr8a.pfb>
-Output written on assignment_2.pdf (6 pages, 156038 bytes).
+{D:/Program Files (x86)/MixTex/fonts/enc/dvips/base
+/8r.enc}<D:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmbx10.pf
+b><D:/Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/
+Program Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program
+ Files (x86)/MixTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files (
+x86)/MixTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files (x86)/M
+ixTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files (x86)/MixTex/
+fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Program Files (x86)/MixTex/fonts/
+type1/urw/courier/ucrr8a.pfb>
+Output written on assignment_2.pdf (8 pages, 167679 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
