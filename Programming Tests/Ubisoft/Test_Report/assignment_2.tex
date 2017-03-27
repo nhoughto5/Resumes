@@ -33,7 +33,7 @@
 \usepackage{listings} % Required for insertion of code
 \usepackage{courier} % Required for the courier font
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
+\usepackage{epigraph}
 % Margins
 \topmargin=-0.45in
 \evensidemargin=0in
@@ -164,54 +164,63 @@
 
 \section{Introduction}
 The \textit{Acme Elevators} challenge was a fun and interesting challenge. 
-This report will be an attempt to describe my thought process and procedure while working towards a solution.
+This report will be an attempt to describe the thought process and procedure used while working towards a solution.
 What follows will be a step by step recording of what took place.
 
 \subsection{Preparation}
-When the \textit{Acme Elevators} challenge was received the first step I took was to organize the given code into a visual studio project.
-Being a windows user I've found Visual Studio (VS) to be one of the most enjoyable C++ development tools.
-The new project was included along side a series of other projects of a similar nature for which I have a github repository for safe keeping and version control.\newline
+When the \textit{Acme Elevators} challenge was received the first step taken was to organize the given code into a visual studio project.
+The new project was included along side a series of other projects of a similar nature for which there is a github repository for safe keeping and version control.
+It was found that the received code was in an unfamiliar style; some effort was made to reformat it into a more familiar and comfortable way.
+This reformatting was done to improve efficiency of development.
+Once the project was set up the requirements in the README were read several times.
+Relating the described task to the incomplete code took thorough analysis of the code and several diagrams.
+The majority of the first several hours of development were spent on understanding the task.
 
-Once the project was set up I began reading through the code however I found the formatting to be unfamiliar.
-I spent some time doing some simple rearranging to put the received code into a more familiar and comfortable format.
-Once finished I returned to carefully re-reading the problem statement and getting familiar with the code. 
+\epigraph{Measure twice, cut once.}
 
 \subsection{Implementation}
-Once I had reviewed the incomplete code several times I made a list of all of the locations of the ``Implement Me'' comment.
-I then added a \textit{TODO} keyword to each so I could easily track them using visual studio's Track List feature.
-As I progressed through implementing the missing code I added a 'Done' tag to each \textit{TODO} comment.
+Once the set-up and review stage was complete a list of all of the locations of the ``Implement Me'' comment was made.
+A \textit{TODO} keyword was added to each so they could be easily found and tracked using visual studio's Track List feature.
+As development progressed a 'Done' tag was added to each \textit{TODO} comment.
+This allowed for a efficient, more manageable development experience.
 
 \subsubsection{Elevator}
-Once I became familiar with the code structure I began looking at the \textit{Elevator} class since it seemed the most 'low-leveled' in the class structure.
-I quickly noticed that it was missing a member which kept track of the destination floor of the elevator instance; I could not see a logical way of directing elevators without one.
+From the preparation process it was found that the \textit{Elevator} class was the most ``low-leveled'' in the class structure.
+It was decided that this would be an effective place to begin.
+It was noticed that the class did not have a member which kept track of the destination floor of the elevator instance.
+Though there may have been other ways to implement this class, the addition of this member seemed to be the most expedient and simple method.
 With this additional member variable the remaining implementation was relatively straightforward.
-Additionally, I noticed that there was no clear definition of number value was used to indicate the bottom floor.
-In North American culture the ground floor is commonly referred to as the 'first' floor however in Europe it is commonly floor zero.
-I added a simple get method in Utils.h where the ground floor value can be set and retrieved.\newline
+
+Near this time it was additionally noticed that there was no clear definition of the number value used to indicate the bottom floor of the elevator shaft.
+In North American culture the ground floor is commonly referred to as the 'first' floor however in Europe the first floor is commonly the first floor ABOVE the ground floor.
+A constant variable was added in Utils.h where the ground floor value can be set and retrieved.
+This allows for a more dynamic definition\newline
 
 It seemed that the easiest way to determine whether an elevator has work to do was whether its current floor equals its target floor.
 Theoretically, should these equal the elevator is idle.
+This logic was used to implement the ``HasWork'' method.
 The step function seemed to need to only modify the current floor value by one on each iteration.
-Assuming the elevator 'HasWork' a check is enacted to ensure it does not go outside of its bounds.
+For each call to ``Step'', a check was done to determine direction.
+The current floor value was incremented/decremented accordingly.
+Assuming the elevator 'HasWork' an additional check is enacted to ensure it does not go outside of its bounds.
 Finally, to select a floor a simple check needed to be done to ensure that the selected floor was attainable by the current elevator. 
+In theory, a building may have elevators of different heights.
 Should it be out of range an error message is printed to the standard error stream.
-
 
 \subsubsection{Elevators}
 The \textit{Elevators} class proved to be slightly more confusing at first.
-The intended purpose of the ``OnMessageElevatorCall'' and ``OnMessageElevatorRequest'' methods was a little vague at first however I surmised the following:
+The intended purpose of the ``OnMessageElevatorCall'' and ``OnMessageElevatorRequest'' methods was a little vague at first however the following was surmised:
 \begin{itemize}
 	\item \textbf{OnMessageElevatorCall}: A human standing in the lobby presses either the ``up'' or ``down'' button to call an elevator to take them in a certain direction.
 	\item \textbf{OnMessageElevatorRequest}: A human has entered the elevator and selects a desired floor.
 \end{itemize}
-I based these interpretations off of the contents of the message objects sent to each. 
-The members of the ``MessageElevatorCall'' and ``MessageElevatorRequest'' classes seemed to fit this interpretation well.\newline
+These interpretations were based off of the contents of the message objects they received; the members of the ``MessageElevatorCall'' and ``MessageElevatorRequest'' classes seemed to fit this interpretation.\newline
 
 Following these definitions, the ``OnMessageElevatorRequest'' method was relatively straightforward to implement. 
 It simply needed to search the vector of elevators, find the requested instance and set its target floor value via the ``SelectFloor'' method.\newline
 
 The ``OnMessageElevatorCall'' method was considerably more complicated. 
-My initial thought was that this method should populate a queue data structure.
+Initially it was thought that this method should populate a queue data structure.
 As humans arrive in the lobby to call an elevator the messages should be prioritized and acted upon in the order they arrived. 
 However, it came to mind that the not all messages can be serviced immediately.
 As an example, if there is only a single elevator, currently on the 4th floor headed towards the 8th floor it is able to stop at any floor in between to pick up additional passengers.
@@ -222,13 +231,13 @@ To implement this a queue which allows entries in the middle of the queue to be 
 The STL Queue container does not allow this so a Vector was used.
 At every ``Step'', the \textit{Elevators} class iterates through the vector from oldest to newest and services (as well as removes from the list) any call it is able to service.\newline
 
-The elevators class must accurately asses the state of all elevators and make a decision which messages are serviceable and how best to do so.
-A call to a method named ``ServiceElevatorCalls'' was added to the elevator step method before the step loop to assess calls.
-This method calls another method named ``canService'' on each message to determine if that message can be service.
+The \textit{Elevators} class must accurately assess the state of all elevators and make a decision which messages are serviceable and how best to do so.
+A call to a method named ``ServiceElevatorCalls'' was added to the elevator step method before the step loop to assess waiting calls.
+This method calls another method named ``canService'' on each message to determine if that message can be serviced.
 The ``canService'' method is relatively complex as the best decision for the current message needs to be made.
 The method loops through each elevator object and evaluates only those that are idle.
 Non-idle elevators are currently servicing another request and should not be altered.
-To decide which idle elevator is best to service the request a series of conditions are determined:
+To decide which idle elevator is best to service the request, a series of conditions were determined:
 \begin{itemize}
 	\item The current distance away from the calling human.
 	\item Whether the elevator is currently above or below the calling floor.
@@ -239,7 +248,8 @@ To decide which idle elevator is best to service the request a series of conditi
 If the calling floor is not reachable by the current elevator then it obviously can not be considered and is skipped.
 The remaining four conditions are evaluated using a boolean logic equation.
 A small java application named \textit{Truth-Table Solver} was used to convert a truth table to the desired boolean formula.
-As can be seen in Figure~\ref{fig:untitled} the truth table was filled, the solver was then able to compute a sum of products formula.
+As can be seen in Figure~\ref{fig:untitled} the truth table was filled.
+The solver was then able to compute a sum of products formula which was used.
 Any elevator which meets the desired conditions is considered as a candidate to service the incoming call.
 A temporary distance variable is used to track the nearest elevator which meets the conditions.\newline
 \begin{figure}
@@ -304,29 +314,27 @@ Several other test cases for the \textit{Elevators} class methods were added but
 
 \subsubsection{Humans}
 The \textit{Humans} class required only two methods to be implemented.
-I began by working on the ``OnMessageElevatorArrived'' method.
-I gathered that there were only two cases for which this method should be called:
+The ``OnMessageElevatorArrived'' method was implemented first.
+It was gathered that there were only two cases for which this method should be called:
 \begin{enumerate}
 	\item When an elevator arrives to pick up a human.
 	\item When an elevator reaches its destination to drop off a human.
 \end{enumerate}
 
-Knowing these two cases, simple checks can be easily implemented.
+Knowing these two cases, simple checks were easily implemented.
 When an elevator arrived message is received it must be checked against all humans.
 For each human the two conditions listed above are checked.
 If a person is in the waiting state and the elevator has arrived to their floor, that person transitions to the traveling state and the elevator becomes occupied.
-Currently, only one person can ride in an elevator at a time.
-Hopefully this will be remedied later.
-When a person is picked up a ``MessageElevatorRequest'' message is generated and broadcast to the elevators.
-This emulates the notion that the person has boarded the elevator and has selected a destination floor.\newline
-
-In the case where the person is in the traveling state and the elevator has arrived to their destination floor, the second case stated above has been met.
-The human transitions to the arrived state.
+This implementation only allows for a single human to ride an elevator at a time.
+It was hoped that this could be remedied.
+When a person is picked up a ``MessageElevatorRequest'' object is generated and broadcast to the elevators.
+This emulates the notion that the human has boarded the elevator and has selected a destination floor.
+In the case where the person is in the traveling state and the elevator has arrived to their destination floor, the second case stated above has been met; the human transitions to the arrived state.\newline
 
 The ``OnMessageHumanStep'' method only required handling the cases where a new human arrives and the removal of humans who have completed their journey.
 When a human is created the constructor sets the state to ``HumanState\_Idle''. 
 The step method looks for humans in the vector with this state. 
-If found the a call is made to the elevators and the humans state is changed to ``HumanState\_Waiting''.
+If found a call is made to the elevators and the human's state is changed to ``HumanState\_Waiting''.
 A test case was added for the ``OnMessageElevatorArrived'' method to ensure proper function.
 Once all of the test cases passed the entire system could be run for the first time.
 A test case was not implemented for the human ``OnMessageHumanStep'' because it was the last of the implementations needing completion; it could be tested by running the entire system.
@@ -336,10 +344,10 @@ When run for the first time some issues were quickly discovered.
 In the \textit{Elevators} class, the ``canService'' method was not properly discerning between idle and active elevators.
 Secondly, a case was not implemented for when a human arrives and an elevator was already on their floor. 
 These two bugs were found and easily remedied.
-To test the system the initial set up of one elevator and one human was run.
+To test the system, the initial set up of one elevator and one human was run.
 Some additional code was added to the ``OnMessageHumanStep'' method; when a human arrives and is removed from the ``myHumans'' vector a new human was generated randomly.
 This allowed the \textit{Elevators} class to run continuously, handling calls and requests as they came in.
-They system ran successfully handling each new human who arrived.
+The system ran successfully handling each new human who arrived.
 
 \subsection{Increased Number of Humans}
 To ramp up the abilities of the system an additional human was added to the ``Humans::Start'' method.
@@ -354,7 +362,7 @@ A solution to this was found by adding an ``onCall'' and ``onRequest'' flag to t
 This allowed a check to be implemented to prevent the call queue from being modified when there is no elevator to service the message.
 
 \subsection{Increased number of elevators} 
-When increasing the number of elevators, if the max floor value were all equal the system worked.
+When increasing the number of elevators, if the max floor value were all equal the system worked without issue.
 When elevators with different floor counts were created there was an issue with the ``OnMessageElevatorArrived'' and ``OnMessageElevatorRequest'' methods.
 When an elevator arrives it sends a ``MessageElevatorArrived'' object. 
 This object only contains the elevatorId and the floor it has arrived to.
@@ -362,8 +370,7 @@ There is no indication of the maximum floor this elevator can reach.
 In the ``OnMessageElevatorArrived'' method, a human uses the elevator that has arrived to their floor.
 Once inside, they find there is no way to get to their floor. 
 This causes an issue as the human never reaches their destination.
-The only solution which could be found at the time was to add an additional parameter to the ``MessageElevatorArrived'' class.
-A human would only get on the elevator if the available one was able to reach their destination.\newline
+The only solution would be to add an additional parameter to the ``MessageElevatorArrived'' class.
 
 This presented a second issue.
 Which elevator would service a call was based upon its availability and its proximity to the human who made the call.
@@ -371,14 +378,18 @@ This decision is not based off of the end destination of the user; it can't be a
 The consequence is that when an elevator arrives to service a human who wants to go out of the range of that elevator it is now both on the same floor as the human and available.
 All other elevators (who may be able to service the human) are further away.
 Since it is not desirable to add a destination variable to the ``MessageElevatorCall'' class an alternative is needed.
-The best solution is, when a call is made by a human, all elevators who do not have work will have their target floor set to the calling humans floor.
+The best solution would be, when a call is made by a human, all elevators who do not have work will have their target floor set to the calling human's floor.
 This way, all available elevators will begin to travel towards the waiting human.
-It was realized that the implementation for this issue was left as a bonus, if there is time it will hopefully be addressed.
+At this time it was realized that the implementation for this issue was left as a bonus.
+With the current structure of the code a solution was non-trivial so was left as a thought exercise. 
 
 Further, an additional bug was found in the ``canService'' method.
-Elevators that began on a floor which already had a call from a human were not having their ``onRequest'' value set properly.
-The consequence of this was that they would complete their first human then never pick up another.
-This was quickly remedied with a simple call to the ``setOnRequest'' method.
+After an ``active'' elevator delivered a human it would never pick up another.
+The bug was a complex issue with the logic described regarding the selection of elevators.
+Due to a lack of time, the ability to have an ``active'' elevator pickup a passenger on its way to a floor was scrapped.
+The ``canService'' method was modified to only select idle elevators. 
+This introduced increased wait times for humans however it ensured the system worked as expected.
+Given more time this would be a desired feature to add.
 
 \subsection{Code Clean-up And Optimization}
 Donald Knuth, winner of the 1974 Turing award once said that ``premature optimization is the root of all evil''.
@@ -416,7 +427,14 @@ They currently sleep until a predefined time and then wake to possibly do nothin
 Both the \textit{Elevators} and \textit{Humans} classes should be given methods which send receive signals via the condition variables.
 
 \subsubsection{Clean Exit}
-
+Currently the two worker threads run on an infinite loop.
+The only way to end the program is to force kill it.
+This is undesirable as it leaves stack objects for each thread in a random state which may or may not be clean-able.
+Ideally there would be a condition to end the while loops in the worker threads.
+Perhaps some unique human or elevator which triggers the end of both loops.
+From there it would be best to allow the worker threads to complete their execution.
+A join statement should be placed in the main function to allow both threads to fully complete and destroy before the main thread exits.
+ 
 \subsubsection{Different Sized Buildings}
 During development it was not realized that this feature was a bonus question. 
 An attempt was made to implement a system such that the elevators could have a variable number of floors.
