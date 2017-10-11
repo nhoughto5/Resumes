@@ -1,0 +1,49 @@
+
+
+Questions they may ask
+=====================
+ - What are your biggest strong points?
+ 1.) strong team and independent work skills.
+
+ ======= Questions ========
+==========================
+
+===== Development ====
+(Devs: Jason & Greg) -> What software development methodology do you use, e.g. Waterfall, Agile, Scrum, XP?
+
+(Devs: Jason & Greg) -> Do you have coding standards?
+
+(Devs: Jason & Greg) -> Does the project have regular regression testing?
+
+(Devs: Jason & Greg) -> Do you use a software repository? (If the answer is no, walk out).
+
+
+===== Team =======
+(Senior: Jason) -> What aspects of the team would you like to change to improve the team?
+
+
+===== Personnel Type Policies =====
+
+(Senior: Jason) -> Do you have any policies against employees listening music while they work?
+
+
+===== Management ======
+
+(Senior: Jason) -> What motivates them
+
+(HR: Eva) -> What's your staff turnover rate?
+
+(HR: Eva) -> How long does the typical hiree at my level stay with the company?
+
+
+====== Miscellaneous =======
+
+(Senior: Jason) -> Why did the guy I'm replacing leave?
+
+(Senior: Jason) -> What are your biggest needs right now?
+
+(Senior: Jason) -> What kind of things would you want someone in this position to do?
+
+(Senior: Jason) -> If you choose me, are there things I could read about your problem domain that would help me be effective on day one?
+
+(Dev: Greg) -> Why the interviewer(s) work(s) there (or likes working there, or continutes to work there, etc). Their responses usually give me a good feel for the company.
