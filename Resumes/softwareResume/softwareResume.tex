@@ -15,7 +15,7 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-
+\usepackage{multicol}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -38,133 +38,169 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+	\vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+	\item\small{
+		\textbf{#1}{: #2 \vspace{-2pt}}
+	}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
 \renewcommand{\labelitemii}{$\circ$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
-
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://nickhoughton.ca/}{\Large Nick Houghton}} & Email : \href{mailto:nhoughto5@gmail.com}{nhoughto5@gmail.com}\\
-  \href{http://nickhoughton.ca/}{www.nickhoughton.ca} & Mobile : +1-310-904-3713 \\
-\end{tabular*}
-
-%-----------PROJECTS-----------------
-\section{Projects}
-\resumeSubHeadingListStart
-\resumeSubItem{QuantSoftware Toolkit}
-{Open source python library for financial data analysis and machine learning for finance.}
-\resumeSubItem{Github Visualization}
-{Data Visualization of Git Log data using D3 to analyze project trends over time.}
-\resumeSubItem{Recommendation System}
-{Music and Movie recommender systems using collaborative filtering on public datasets.}
-\resumeSubItem{Mac Setup}
-{Book that gives step by step instructions on setting up developer environment on Mac OS.}
-\resumeSubHeadingListEnd
-
-
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-%%% JibJab %%%
-    \resumeSubheading
-      {JibJab Studios}{Marina Del Rey, California}
-      {Software Engineer}{May 2017 - Present}
-      \resumeItemListStart
-        \resumeItem{Tensorflow}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models.}
-        \resumeItem{Apache Beam}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
-      \resumeItemListEnd
-
-%%% ONC %%%
-    \resumeSubheading
-      {Ocean Networks Canada}{Victoria B.C.}
-      {Senior Software Engineer}{Jan 2014 - Oct 2016}
-      \resumeItemListStart
-        \resumeItem{Notifications}
-          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
-        \resumeItem{Nostos}
-          {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
-        \resumeItem{Workflows}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
-        \resumeItem{Data Collection}
-          {Designed the internal survey and crowd sourcing platfowm which allowed for creating various tasks for crowd sourding or embedding surveys across the Coursera platform.}
-        \resumeItem{Dev Environment}
-          {Analytics environment based on docker and AWS, standardized the python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
-        \resumeItem{Data Warehousing}
-          {Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
-        \resumeItem{Recommendations}
-          {Core service for all recommendation systems at Coursesa, currently used on the homepage and throughout the content discovery process. Worked on both offline training and online serving.}
-        \resumeItem{Content Discovery}
-          {Improved content discovery by building a new onboarding experience on coursera. Using this to personalize the search and browse experience. Also worked on ranking and indexing improvements.}
-        \resumeItem{Course Dashboards}
-          {Instructor dashboards and learner surveying tools, which helped instructors run their class better by providing data on Assignments and Learner Activity.}
-      \resumeItemListEnd
-
-%    \resumeSubheading
-%      {Lucena Research}{Atlanta, GA}
-%      {Data Scientist}{Summer 2012 and 2013}
-%      \resumeItemListStart
-%        \resumeItem{Portfolio Management}
-%          {Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
-%        \resumeItem{QuantDesk}
-%          {Python backend for a web application used by hedge fund managers for portfolio management.}
-%      \resumeItemListEnd
-%
-%    \resumeSubheading
-%      {Georgia Institute of Technology}{Atlanta, GA}
-%      {Research and Teaching Assistant}{Jan 2012 - Dec 2013}
-%      \resumeItemListStart
-%        \resumeItem{Research Assistant - Machine Learning}
-%          {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
-%        \resumeItem{Teaching Assistant - Computational Investing}
-%          {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
-%      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-%-----------EDUCATION-----------------
-\section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{University of Victoria}{Victoria B.C. Canada}
-{Masters of Applied Science in Computer Engineering}{May. 2015 -- Dec. 2016}
-\resumeSubheading
-{University of Victoria}{Victoria B.C. Canada}
-{Bachelor of Engineering in Computer Engineering}{Sept. 2010 -- Apr. 2015}
-\resumeSubHeadingListEnd
-
-
-%-------------------------------------------
+	%----------HEADING-----------------
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{\href{http://nickhoughton.ca/}{\Large Nick Houghton}} & Email : \href{mailto:nhoughto5@gmail.com}{nhoughto5@gmail.com}\\
+		\href{http://nickhoughton.ca/}{www.nickhoughton.ca} & Mobile : +1-310-904-3713 \\
+	\end{tabular*}
+	\vspace{-10mm}
+	\section{}
+	\begin{center}
+		\Large Software Engineer
+		\vspace*{-2mm}
+	\end{center}
+	Passionate software developer with advanced knowledge of rendering techniques and tools, 3D mathematics, game engines and hardware systems. 
+	AI, game-play and systems programmer.
+	Multi-language developer.
+	Proven use of software design patterns and architecture, development strategies and unit testing.
+	Proven research experience. 
+	Proven experience with team leadership roles. 
+	Skilled in designing, developing, and maintaining software systems with a focus on building efficient and reliable products.
+	\textbf{Areas of expertise include:}
+	\begin{multicols}{4}
+		\begin{itemize}
+			\setlength\itemsep{-2mm}
+			\item 3D Mathematics
+			\item Unreal Engine 4
+			\item SQL
+			\item C++
+			\item GLSL and HLSL
+			\item JavaScript
+			\item Algorithms
+			\item Unity 5
+			\item HTML5
+			\item OpenGL \& WebGL
+			\item Git
+			\item Java
+		\end{itemize}
+	\end{multicols}
+	%-----------PROJECTS-----------------
+	\section{Projects}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Dead Earth: A first person shooter using Unity 5 and C\#}{}
+	\begin{multicols}{2}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Implemented AI enemies
+			\item Achieved blood effects with HLSL shaders
+		\end{itemize}	
+	\end{multicols}
+	\vspace*{-5mm}
+	\resumeSubItem{Jump-Ship: A 2D space shooter using Unity 5 and C\#}{}
+	\begin{multicols}{2}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Created weapon mechanics
+			\item Implemented AI enemies
+		\end{itemize}
+	\end{multicols}
+	\vspace*{-5mm}
+	\resumeSubItem{Unreal Development Online Course}{}
+	\begin{multicols}{2}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Completed two 3D games with UE4: Building Escape, Battle Tank
+			\item Improved on combat mechanics
+			\item Implemented AI tank enemies
+			\item Designed a main menu
+			\item Designed battle landscapes
+			
+		\end{itemize}
+	\end{multicols}
+	\vspace*{-5mm}
+	\resumeSubItem{Zombie-Hunt: A first person shooter made with OpenGL and C++}{}
+	\begin{multicols}{2}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Implemented AI enemies
+			\item Created weapon animations in \textit{Blender}
+			\item Created a custom renderer
+			\item Created a custom .OBJ file importer
+		\end{itemize}
+	\end{multicols}
+	\resumeSubHeadingListEnd
+	
+	
+	%-----------EXPERIENCE-----------------
+	\vspace*{-6mm}
+	\section{Experience}
+	\resumeSubHeadingListStart
+	
+	%%% JibJab %%%
+	\resumeSubheading
+	{JibJab Studios}{Marina Del Rey, California}
+	{Software Engineer}{May 2017 - Present}
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item Developed and maintained a render library in both OpenGL and WebGL
+		\item Spearheaded development and operation of a mass gif rendering system using java and Amazon Web Services (AWS)
+		\item Installed render library with EmberJS, React and iOS applications
+		\item Implemented shell scripts to automate render tasks using FFMPEG
+	\end{itemize}
+	
+	%%% ONC %%%
+	\resumeSubheading
+	{Ocean Networks Canada}{Victoria B.C.}
+	{Software Engineer}{May 2016 - Apr 2017}
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item Developed large scale oceanic data API with JavaEE
+		\item Improved server performance using JMeter load testing
+		\item Designed and developed user-facing features using Javascript, HTML5 and CSS3.
+	\end{itemize}
+	
+	%%% ONC %%%
+	\resumeSubheading
+	{University of Victoria}{Victoria B.C.}
+	{Hardware Security Fellow}{May 2015 - Dec 2016}
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item Developed a hardware trojan detection application using Java
+		\item Designed and implemented a protoype of a new homomorphic encryption algorithm using C++.
+	\end{itemize}
+	\resumeSubHeadingListEnd
+	
+	%-----------EDUCATION-----------------
+	\section{Education}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{University of Victoria}{Victoria B.C. Canada}
+	{Masters of Applied Science in Computer Engineering}{May. 2015 -- Dec. 2016}
+	\resumeSubheading
+	{University of Victoria}{Victoria B.C. Canada}
+	{Bachelor of Engineering in Computer Engineering}{Sept. 2010 -- Apr. 2015}
+	\resumeSubHeadingListEnd
+	%-------------------------------------------
 \end{document}
