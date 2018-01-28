@@ -1,0 +1,72 @@
+1.) Constructor Calls
+
+		class Base {
+		public:
+			Base() {
+				std::cout << "Base\n";
+			}
+		};
+		int main() {
+			Base * bp = new Base(); // New returns a reference
+			Base *bp2 = new Base;
+			Base bp3 = Base();
+			Base b;
+			return 0;
+		}
+	Output:
+		Base
+		Base
+		Base
+		Base
+
+2.) Pure Virtual Functions
+		Defined: virtual void show() = 0;
+		
+3.) Abstract class defined by having at least 1 pure virtual function
+
+4.) Destructors can be virtual but Constructors can not. If destructor is not virtual then only base destructor may be called.
+
+5.) Functions with the same signature in all descendant classes automatically become virtual.
+
+6.) Each instantiation of function template has its own copy of local static variables.
+
+	template <typename T>
+	void fun(const T& x) {
+	  static int i = 10;
+	  cout << ++i;
+	  return;
+	}
+	 
+	int main() {    
+	  fun<int>(1);  // prints 11
+	  cout << endl;
+	  fun<int>(2);  // prints 12
+	  cout << endl;
+	  fun<double>(1.1); // prints 11
+	  cout << endl;
+	  getchar();
+	  return 0;
+	}
+
+7.) Template specialization allows us to have different code for a particular data type.
+
+8.) Get size of array with sizeof(arr)/sizeof(arr[0])
+	**Note: Must be done within scope of declaration of array (i.e. can not make an array size method but can do a macro)
+	
+9.) Non-type parameters  to template must be const, so they cannot be modified
+
+		template <int i>
+		void fun() {
+		   i = 20;
+		   cout << i;
+		}
+		 
+		int main() {
+		   fun<10>();
+		   return 0;
+		}
+		
+		Output: Compiler Error, can not modify i because it is const
+
+10.) When an exception is thrown and not caught, the program terminates abnormally.
+
