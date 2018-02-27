@@ -25,7 +25,9 @@ C. objIn.Display();
 D. objIn.Outer::m_Out    
 E. objOut.Inner::m_In;
 
-Question 2: Which of the following statements accurately describe unary operator  overloading in C++?
+ANSWER: C
+
+Question 2: Which of the following statements accurately describe unary operator overloading in C++?
 ==================================================================    
 A. A unary operator can be overloaded with one parameter when the operator function is a class member.     
 B. A unary operator can be overloaded with one parameter when the operator function is free standing function (not a class member).     
@@ -33,7 +35,17 @@ C. A unary operator can only be overloaded if the operator function is a class m
 D. A unary operator can be overloaded with no parameters when the operator function is a class member.     
 E. A unary operator can be overloaded with no parameters when the operator function is a free standing function (not a class member).
 
-Question 3: Which of the following statements describe the result when standard new  cannot allocate the requested storage in C++?  (Note: older compilers may not implement standard behavior).   
+ANSWER: D
+
+      // overloaded minus (-) operator
+      Distance operator- () {
+         feet = -feet;
+         inches = -inches;
+         return Distance(feet, inches);
+      }
+
+
+Question 3: Which of the following statements describe the result when standard new cannot allocate the requested storage in C++?  (Note: older compilers may not implement standard behavior).   
 ================================================================== 
 A. It throws an insufficient_memory exception.    
 B. It returns null.     
@@ -41,7 +53,9 @@ C. It throws a bad_alloc exception.
 D. It returns silently with no effect on the expression.    
 E. It logs an error message to the mem_err.log file.
 
-Question 4: Which of the following correctly identify benefits of the getline() member  function for cin over the extraction operator in C++?    
+ANSWER: C
+
+Question 4: Which of the following correctly identify benefits of the getline() member function for cin over the extraction operator in C++?    
 ==================================================================
 A. The number of bytes to read can be specified to the getline() function, whereas it cannot be done with the extraction operator.     
 B. Delimiters indicating end of input can be specified to the getline() function, whereas the extraction operator has no such facility.     
@@ -49,8 +63,12 @@ C. The getline() function by default, accepts whitespace, and returns on seeing 
 D. The getline() function can be overloaded to accept different argument types, whereas the extraction operator cannot be overloaded.     
 E. The getline() function can be used like a manipulator with cin, whereas the extraction operator cannot be used as a manipulator.
 
+ANSWER: C
 
-Question 4: Which of the following statements correctly describe the code below in  C++?
+std::getline reads till a newline is found and operator>> reads till a space (as defined by std::isspace) and is found. 
+Both remove their respective delimiter from the stream but don't put it in the output buffer.
+
+Question 4: Which of the following statements correctly describe the code below in C++?
 ================================================================== 
 #define language 437            //Line 1 
 #if language < 400  
@@ -61,21 +79,21 @@ Question 4: Which of the following statements correctly describe the code below 
 printf("%d", language);      //Line 6 
 #endif 
 #endif 
-A.  An error or warning will occur on Line 6 because a macro cannot be used as  part of a preprocessor directive. 
+A.  An error or warning will occur on Line 6 because a macro cannot be used as part of a preprocessor directive. 
 B.  An error or warning will occur on Line 2 because #undef is not a valid preprocessor directive. 
 C.  An error or warning will occur on Line 4 because language has already been defined. 
 D.  If Line 1 is changed to #define language 300, Line 6 will print "850". 
 E.  An error or warning will occur on Line 3 because #else can only be used as the last conditional in the chain. 
-Answer: D
+ANSWER: A
 
-Question 5: Which of the following statements regarding the benefits of using template  functions over preprocessor #define macros are correct?
+Question 5: Which of the following statements regarding the benefits of using template functions over preprocessor #define macros are correct?
 ==================================================================
 A.  A preprocessor macro expansion cannot work when user-defined types are passed to it as arguments. 
 B.  Since the preprocessor does the macro expansion and not the compiler, the build process takes a longer period of time. 
 C.  While expanding #define macros, the preprocessor does no type checking on the arguments to the macro. 
 D.  A preprocessor macro expansion incurs a performance overhead at runtime. 
 E.  It is simple to step into a template function code during the debugging process. 
-Answer: E 
+ANSWER: E 
 
 Question 6: Which of the following are container adapters in the STL (Standard Template  Library) in C++?
 ==================================================================
@@ -84,16 +102,18 @@ Question 6: Which of the following are container adapters in the STL (Standard T
  C.  stack  
  D.  queue  
  E.  deque 
- Answer: C D 
+ANSWER: C D 
 
-Question 7: Which of the following functions of the ifstream class can be used to  determine the current position of the stream's get pointer in C++?  
+Question 7: Which of the following functions of the ifstream class can be used to determine the current position of the stream's get pointer in C++?  
 ================================================================== 
-A. pos_type tellg()     
-B. void tellp(pos_type&)    
-C. void tellg(pos_type&)    
-D. pos_type tellp()     
-E. void seekg(pos_type&
- 
+A. pos_type tellg()     // Get Position in input sequence
+B. void tellp(pos_type&)    // NA
+C. void tellg(pos_type&)  //NA  
+D. pos_type tellp()     // NA
+E. void seekg(pos_type&) // NA  
+
+ANSWER: A
+
 Question 7: Which of the following correctly identify benefits of the getline() member  function for cin over the extraction operator in C++?   
 ================================================================== 
 A.  The getline() function by default, accepts whitespace, and returns on seeing the \n character, whereas the extraction operator returns when it encounters any whitespace character.  
@@ -101,6 +121,8 @@ B.  Delimiters indicating end of input can be specified to the getline() functio
 C.  The getline() function can be overloaded to accept different argument types, whereas the extraction operator cannot be overloaded.  
 D.  The number of bytes to read can be specified to the getline() function, whereas it cannot be done with the extraction operator.  
 E.  The getline() function can be used like a manipulator with cin, whereas the extraction operator cannot be used as a manipulator.
+
+ANSWER: A
 
 Question 8: In which of the following situations is the unexpected() handler called in C++?  
 ==================================================================  
@@ -110,16 +132,18 @@ C. When the stack gets corrupted during unwinding as a result of a thrown except
 D. When a function that has an "exception specification" throws an exception not listed in that specification.     
 E. When a constructor throws an exception 
 
-Question 8: In which of the following scenarios is a Copy Constructor called or  invoked?
+ANSWER: D
+
+Question 8: In which of the following scenarios is a Copy Constructor called or invoked?
 ==================================================================    
 A.  When no conversion function exists for converting the class object to another class object  
 B.  When an existing object is assigned an object of its own class  
 C.  When a function receives as an argument, an object of the class, by value  
 D.  When a function returns an object of the class by value  
 E.  When creating an object and initializing it with an object of its own class 
-Answer: B C D E
+ANSWER: B C D E
 
-Question 9: Which of the following statements correctly describe the results of  executing the code below in C++?   
+Question 9: Which of the following statements correctly describe the results of executing the code below in C++?   
 ==================================================================
 	#include <iostream> 
 	using namespace std;   
@@ -145,7 +169,9 @@ C.  int main() {      cout << ExDer1::GetStat() << endl; }  will result in an am
 D.  class ExDer1 : public ExBase {  public:     friend int Der1Fn(){ return ExBase::stat; } };  will result in an access error from the compiler.  
 E.  int main() {      cout << ExDer1::ExBase::GetStat() << endl; }  will display an output as "25". 
 
-Question 10: Given the following program snippet, what can we conclude about the  use of dynamic_cast in C++?
+ANSWER: D
+
+Question 10: Given the following program snippet, what can we conclude about the use of dynamic_cast in C++?
 ==================================================================
 #include <iostream> 
 #include <memory>
@@ -192,20 +218,25 @@ C.  The dynamic_cast is redundant, the programmer can invoke Activate directly, 
 D.  The dynamic_cast is necessary since we cannot know for certain what concrete type is returned by IWidgetSelector::Selection().   
 E.  A polymorphic_cast should be used in place of the dynamic_cast. 
 
-Question 11: Which of the following statements correctly describe the results of  executing the code below in C++?
+ANSWER: A...?
+
+Question 11: Which of the following statements correctly describe the results of executing the code below in C++?
 ==================================================================
-using namespace std;
-class ExBase {
-private:
-	static int stat;
-public:
-	static int GetStat() { return stat; }
-};   int ExBase::stat = 25;
-class ExDer1 : public ExBase {
-public:
-	friend int Der1Fn() { return ExBase::stat; }
-};
-class ExDer2 : public ExBase {};
+	using namespace std;
+	class ExBase {
+	private:
+		static int stat;
+	public:
+		static int GetStat() { return stat; }
+	};   
+
+	int ExBase::stat = 25;
+
+	class ExDer1 : public ExBase {
+	public:
+		friend int Der1Fn() { return ExBase::stat; }
+	};
+	class ExDer2 : public ExBase {};
 
 A. 
 	int main() {      
@@ -240,8 +271,10 @@ E.
 	}  
 will display an output as "25". 
 
+ANSWER: B
 
-Question 11: Which of the following statements describe the result when standard  new cannot allocate the requested storage in C++?  (Note: older compilers may not implement standard behavior).  
+
+Question 11: Which of the following statements describe the result when standard new cannot allocate the requested storage in C++?  (Note: older compilers may not implement standard behavior).  
 ==================================================================  
 A.  It throws a bad_alloc exception.  
 B.  It returns null.  
@@ -249,7 +282,9 @@ C.  It returns silently with no effect on the expression.
 D.  It throws an insufficient_memory exception.  
 E.  It logs an error message to the mem_err.log file.
 
-Question 12: In C++, which of the following is the best declaration for an overloaded  operator[] to allow read-only access (and only read-only access) to the data?
+ANSWER: A
+
+Question 12: In C++, which of the following is the best declaration for an overloaded operator[] to allow read-only access (and only read-only access) to the data?
 ==================================================================
 template<typename T> class MyArray {      
 	//declaration goes here 
@@ -259,18 +294,19 @@ B.  const T& operator[](size_t i);
 C.  const T& operator[](size_t i) const;  
 D.  T& operator[](size_t i)const;  
 E.  T& operator[](const size_t i); 
-Answer: C 
+ANSWER: C 
 
-Question 13: Which of the following declarations of function main are standard or  standard conforming extensions? (Please note that some compilers accept ill-formed main declarations, these should be considered incorrect).    
+Question 13: Which of the following declarations of function main are standard or standard conforming extensions? (Please note that some compilers accept ill-formed main declarations, these should be considered incorrect).    
 ==================================================================
 A.  int main()  
 B.  void main(char* argv[], int argc)  
 C.  int main(int argc, char* argv[])  
 D.  void main()  
 E.  int main(int argc, char* argv[], char* arge[]) 
-Answer: C
 
-Question 14: What is the correct declaration for a file stream insertion operator  for a class my_stuff::my_class as indicated in the C++ code snippet below?
+ANSWER: C (this is equivalent: int main(int argc, char** argv))
+
+Question 14: What is the correct declaration for a file stream insertion operator for a class my_stuff::my_class as indicated in the C++ code snippet below?
 ==================================================================
 #include <fstream>   
 namespace my_stuff {      
@@ -284,6 +320,7 @@ B.  const my_class& operator<<(const my_class&)
 C.  std::fstream& operator<<(std::fstream& fs, const my_class&)  
 D.  std::ifstream& operator<<(std::ifstream& ifs, const my_class&)  
 E.  void operator<<(const my_class&)
+ANSWER: A
 
 Question 15: Which of the following statements describe the results of executing  the code snippet below in C++?
 ==================================================================
@@ -297,14 +334,17 @@ B.  The compiler will allow this statement, but the linker will not be able to r
 C.  The i within main will have a value of 1.  
 D.  The compiler will not allow this statement.  
 E.  The result is compiler-dependent. 
+ANSWER: A, D
 
-Question 16: Which of the following methods can a developer use to override the default  terminate() function in C++?    
+Question 16: Which of the following methods can a developer use to override the default terminate() function in C++?    
 ==================================================================
 A.  Write the terminate() function with two int arguments.  
 B.  Write the terminate() function with a runtime_error argument.  
 C.  Pass the address of the overriding function to the set_terminate() function.  
 D.  Write the terminate() function with one int argument.  
 E.  Write the terminate() function with a runtime_exception argument.
+
+ANSWER: C
 
 Question 17: Which of the following identify const-correctness failures in the C++ program below?
 ==================================================================
@@ -340,18 +380,23 @@ C.  void make_changes(MyData* edit); should be void make_changes(const MyData* e
 D.  MyArray(MyArray& copy); should be MyArray(const MyArray& copy);  
 E.  const MyArray& operator=(const MyArray& copy); should be const MyArray& operator=(const MyArray& copy) const;
 
-Question 18: In the given C++ code snippet, which of the following statements correctly  identify how Mon of enum DOW can be assigned to a variable named var?
+ANSWER: A, B, D
+
+Question 18: In the given C++ code snippet, which of the following statements correctly identify how Mon of enum DOW can be assigned to a variable named var?
 ==================================================================
 void main(){     
 	const int Mon = 1, Tue = 2;     
 	enum DOW{ Mon = 11, Tue = 12 };    
 	...
+}
 
-A.  The variable var will have to be of type enum DOW, and then defined as:   var = Mon;  
+A.  The variable var will have to be of type enum DOW, and then defined as: var = Mon;  
 B.  Mon of enum DOW cannot be assigned because the compiler will give a redefinition error.   
-C.  Since enum DOW has been declared and defined later, it will be pushed onto the stack later, but will be accessed first. Hence, the scope resolution operator is not required and var will be assigned as:    var = Mon;  
-D.  Since Mon is of type enum DOW, var will be assigned as:   var = DOW::Mon;  
-E.  The variable var must be of type const int, and then it can be assigned as:   var = static_cast<const int>(Mon);
+C.  Since enum DOW has been declared and defined later, it will be pushed onto the stack later, but will be accessed first. Hence, the scope resolution operator is not required and var will be assigned as: var = Mon;  
+D.  Since Mon is of type enum DOW, var will be assigned as:var = DOW::Mon;  
+E.  The variable var must be of type const int, and then it can be assigned as: var = static_cast<const int>(Mon);
+
+ANSWER: A
 
 Question 19: Which of the following are not pre-processor directives in C++?
 ==================================================================     
@@ -361,7 +406,9 @@ C.  #elif
 D.  #define  
 E.  #extern
 
-Question 20: Which allocator member function do standard containers use to acquire  storage for their elements in C++?
+ANSWER: E
+
+Question 20: Which allocator member function do standard containers use to acquire storage for their elements in C++?
 ==================================================================     
 A.  std::allocator<>::allocate(size_t)  
 B.  std::allocator<>::malloc(int)  
@@ -369,7 +416,9 @@ C.  std::allocator<>::make(size_t)
 D.  std::allocator<>::new(size_t)  
 E.  std::allocator<>::acquire(size_t)
 
-Question 21: Which of the following statements provide a valid reason not to use  RTTI for distributed (i.e. networked between different platforms) applications in C++?
+ANSWER: B   https://blogs.msdn.microsoft.com/vcblog/2008/08/28/the-mallocator/
+
+Question 21: Which of the following statements provide a valid reason not to use RTTI for distributed (i.e. networked between different platforms) applications in C++?
 ==================================================================    
 A.  RTTI does not have standardized run-time behavior.  
 B.  RTTI uses too much memory.  
@@ -377,7 +426,9 @@ C.  RTTI is too slow.
 D.  RTTI's performance is unpredictable/non-deterministic.  
 E.  RTTI frequently fails to function correctly at run-time.
 
-Question 22: In the given C++ code snippet, which of the following statements correctly  identify how Mon of enum DOW can be assigned to a variable named var? 
+ANSWER: A, C
+
+Question 22: In the given C++ code snippet, which of the following statements correctly identify how Mon of enum DOW can be assigned to a variable named var? 
 ==================================================================
 	void main() {     
 	const int Mon = 1, Tue = 2;     
@@ -389,7 +440,9 @@ C. Since Mon is of type enum DOW, var will be assigned as:   var = DOW::Mon;
 D. Since enum DOW has been declared and defined later, it will be pushed onto the stack later, but will be accessed first. Hence, the scope resolution operator is not required and var will be assigned as:    var = Mon;     
 E. The variable var must be of type const int, and then it can be assigned as:   var = static_cast<const int>(Mon);
 
-Question 22: Which of the following functions of the ifstream class can be used  to determine the current position of the stream's get pointer in C++?    
+ANSWER: A
+
+Question 22: Which of the following functions of the ifstream class can be used to determine the current position of the stream's get pointer in C++?    
 ==================================================================
 A.  void tellg(pos_type&)  
 B.  pos_type tellg()  
@@ -397,7 +450,9 @@ C.  pos_type tellp()
 D.  void tellp(pos_type&)  
 E.  void seekg(pos_type&)
 
-Question 23: Protected, or private, inheritance, as opposed to public inheritance,  models which type of relationship in C++?   
+ANSWER: A
+
+Question 23: Protected, or private, inheritance, as opposed to public inheritance, models which type of relationship in C++?   
 ==================================================================
 A. Can-only-have-one-of    
 B. Has-a     
@@ -405,7 +460,9 @@ C. Is-implemented-in-terms-of
 D. Was-a   
 E. Shares-a-relationship-with  
 
-Question 23: Which of the following C++ keywords are designed to speed up execution  of a C++ function?  
+ANSWER: E
+
+Question 23: Which of the following C++ keywords are designed to speed up execution of a C++ function?  
 ==================================================================  
 A.  friend  
 B.  static  
@@ -413,7 +470,9 @@ C.  extern
 D.  inline  
 E.  member
 
-Question 24: Which of the following template declarations provide the correct syntax  to write a template class
+ANSWER: D
+
+Question 24: Which of the following template declarations provide the correct syntax to write a template class
 ==================================================================   
 template <class T> class Derived;   
 that has to inherit from another template class   
@@ -425,8 +484,9 @@ C.  template <class T, class Q> class Derived : public Base<T>     where Q can b
 D.  template <class T, class Q> class Derived<Q> : public Base     where Q can be used as the templatized type for class Derived.  
 E.  template <class Q> class Derived<Q> : public Base
 
+ANSWER: C
 
-Question 25: For the code snippet below, which of the following statements provide  the correct order of constructor calls when object obj is created in main()? 
+Question 25: For the code snippet below, which of the following statements provide the correct order of constructor calls when object obj is created in main()? 
 ==================================================================
 class Base {
 public:
@@ -445,13 +505,15 @@ void main()
     Derive obj;
 }
 
-A.  Base constructor Derive constructor  
-B.  Base constructor Derive constructor Nest constructor  
-C.  Base constructor Nest constructor Derive constructor  
-D.  Nest constructor Base constructor Derive constructor  
-E.  Derive constructor Base constructor Nest constructor
+A.  Base constructor, Derive constructor  
+B.  Base constructor, Derive constructor, Nest constructor  
+C.  Base constructor, Nest constructor, Derive constructor  
+D.  Nest constructor, Base constructor, Derive constructor  
+E.  Derive constructor, Base constructor, Nest constructor
 
-Question 26: Which of the following options describe the expected overhead for a  class that has 5 virtual functions? 
+ANSWER: A
+
+Question 26: Which of the following options describe the expected overhead for a class that has 5 virtual functions? 
 ==================================================================
 A.  Every object of the class holds the address of a structure holding the addresses of the 5 virtual functions.   
 B.  Every object of the class holds the addresses of the 5 virtual functions.  
@@ -459,13 +521,17 @@ C.  Every object of the class holds the address of the first virtual function, a
 D.  Every object of the class holds the address of a link list object that holds the addresses of the virtual functions.   
 E.  Every object of the class holds the address of the class declaration in memory, through which the virtual function calls are resolved.
 
-Question 27: Which of the following reasons describe why a destructor cannot throw  an exception in C++?    
+ANSWER: A (https://stackoverflow.com/a/99341/4035677)
+
+Question 27: Which of the following reasons describe why a destructor cannot throw an exception in C++?    
 ==================================================================
 A.  It can invoke the terminate() handler.  
 B.  Since the object is being destroyed, it is illogical to throw an exception then. 
 C.  The C++ language does not permit it; a throw statement in a destructor will be caught as an error by the compiler.   
 D.  A destructor may be invoked as a result of stack unwinding while an exception is being handled.   
 E.  A destructor in C++ cannot implement a try...catch block.
+
+ANSWER: A, D
 
 Question 28: Which of the following statements accurately describe the new[] operator  in C++? 
 ==================================================================   
@@ -475,7 +541,9 @@ C.  It calls operator new[](size_t).
 D.  It calls operator new[](size_t, int).  
 E.  It stores the number of objects allocated.
 
-Question 29: The C++ code below generates a compiler error. Which of the following  solutions can be used to correctly access the member named nested?
+ANSWER: C
+
+Question 29: The C++ code below generates a compiler error. Which of the following solutions can be used to correctly access the member named nested?
 ==================================================================
 class SomeClass {
 public:
@@ -500,7 +568,9 @@ C.  Declare the class Nest in public scope of class SomeClass.
 D.  Make the object nst a reference object, and make the function createNest() return a Nest&.   
 E.  Derive a class from SomeClass. Make the object nst a derived class pointer so that it can access SomeClass's protected declarations.
 
-Question 29: Which of the following reasons describe why a destructor cannot throw  an exception in C++? 
+ANSWER: A, C
+
+Question 29: Which of the following reasons describe why a destructor cannot throw an exception in C++? 
 ==================================================================   
 A. The C++ language does not permit it; a throw statement in a destructor will be caught as an error by the compiler.     
 B. A destructor may be invoked as a result of stack unwinding while an exception is being handled.     
@@ -508,7 +578,9 @@ C. It can invoke the terminate() handler.
 D. Since the object is being destroyed, it is illogical to throw an exception then.    
 E. A destructor in C++ cannot implement a try...catch block.
 
-Question 30: In C++, there is a standard global object wcin of type wistream.  What  is the template type of the wistream typedef? 
+ANSWER: B, C
+
+Question 30: In C++, there is a standard global object wcin of type wistream. What  is the template type of the wistream typedef? 
 ==================================================================   
 A. std::basic_istream<char, char_traits<char> >    
 B. std::istream<wchar_t, char_traits<wchar_t> >     
@@ -516,15 +588,49 @@ C. std::basic_istream<wchar_t, char_traits<wchar_t> >
 D. std::istream<char, char_traits<char> >    
 E. std::wistream<char, char_traits<char> >
 
-Question 30: What is the order of destructor calls for an object of class Y inherited  from class X that has an object of class A as data member of class Y in C++? 
-==================================================================
- A.  ~Y() ~X() ~A()   
- B.  ~X() ~A() ~Y()   
- C.  ~Y() ~A() ~X()   
- D.  ~A() ~Y() ~X()   
- E.  ~X() ~Y() ~A() 
+ANSWER: C
 
-Question 31: A C++ developer wants to handle a static_cast<char*>() operation for  the class String shown below. Which of the following options are valid declarations that will accomplish this task?
+Question 30: What is the order of destructor calls for an object of class Y inherited from class X that has an object of class A as data member of class Y in C++? 
+==================================================================
+A.  ~Y() ~X() ~A()   
+B.  ~X() ~A() ~Y()   
+C.  ~Y() ~A() ~X()   
+D.  ~A() ~Y() ~X()   
+E.  ~X() ~Y() ~A() 
+
+ANSWER: C
+
+	class A {
+	public:
+		A() {
+			cout << "A\n";
+		}
+		~A() {
+			cout << "~A\n";
+		}
+	};
+	class X {
+	public:
+		
+		X() {
+			cout << "X\n";
+		}
+		~X() {
+			cout << "~X\n";
+		}
+	};
+	class Y : X {
+	public:
+		A a;
+		Y() {
+			cout << "Y\n";
+		}
+		~Y() {
+			cout << "~Y\n";
+		}
+	};
+
+Question 31: A C++ developer wants to handle a static_cast<char*>() operation for the class String shown below. Which of the following options are valid declarations that will accomplish this task?
 ==================================================================
 class String { 
 public:    
@@ -538,6 +644,8 @@ C.  String operator char*();
 D.  operator char*();  
 E.  char* operator String();
 
+ANSWER: D
+
 Question 32: In C++, there is a standard global object wcin of type wistream.  What  is the template type of the wistream typedef?  
 ==================================================================
 A.  std::basic_istream<wchar_t, char_traits<wchar_t> >  
@@ -546,30 +654,7 @@ C.  std::istream<char, char_traits<char> >
 D.  std::istream<wchar_t, char_traits<wchar_t> >  
 E.  std::wistream<char, char_traits<char> >
 
-Question 32: The C++ code below generates a compiler error. Which of the following  solutions can be used to correctly access the member named nested?
-==================================================================
-class SomeClass {
-public:
-	int data;
-protected:
-	class Nest {
-	public:
-		int nested;
-	};
-public:
-	static Nest* createNest() {
-		return new Nest;
-	}
-};
-void use_someclass() {
-	SomeClass::Nest* nst = SomeClass::createNest();
-	nst->nested = 5;
-}
-A. Make function void use_someclass() a friend of class SomeClass.     
-B. Make the object nst a reference object, and make the function createNest() return a Nest&.     
-C. Declare the class Nest in public scope of class SomeClass.   
-D. Make the function createNest() a non-static function of SomeClass.     
-E. Derive a class from SomeClass. Make the object nst a derived class pointer so that it can access SomeClass's protected declarations.
+ANSWER: B
 
 Question 33: How can a C++ developer use the placement new syntax to make new allocate an object of class SomeClass at a particular memory address stored in a pointer type variable named pmem?
 ==================================================================    
@@ -579,13 +664,17 @@ C.  new pmem SomeClass;
 D.  new SomeClass pmem;  
 E.  new (pmem, SomeClass);
 
-Question 34: Under which of the following conditions will a C++ developer use  polymorphism? 
+ANSWER: B
+
+Question 34: Under which of the following conditions will a C++ developer use polymorphism? 
 ==================================================================   
 A.  When there is a looping construct that uses a continue more than once  
 B.  When there is a need for the code written today to call code written tomorrow  
 C.  When there is a need to check for the type of an object to determine which function must be called   
 D.  When there is a need to check the value of a variable to determine which of two or more functions to call   
 E.  When there is a need to modify the existing interface of a class 
+
+ANSWER: C
 
 Question 34: Which of the following define valid string constants in C++?    
 ==================================================================
@@ -595,7 +684,9 @@ C. #define GREETING = "Hello!"
 D. #define MESSAGE "Whoever said that you could run this program" & "must not have known what you'd do."    
 E. #define MESSAGE "Hello " #concat MESSAGE & #UserName  
 
-Question 35: Which allocator member function do standard containers use to acquire  storage for their elements in C++?
+ANSWER: B 
+
+Question 35: Which allocator member function do standard containers use to acquire storage for their elements in C++?
 ==================================================================   
 A. std::allocator<>::make(size_t)    
 B. std::allocator<>::new(size_t)    
@@ -603,15 +694,9 @@ C. std::allocator<>::malloc(int)
 D. std::allocator<>::allocate(size_t)    
 E. std::allocator<>::acquire(size_t) 
 
-Question 35: Protected, or private, inheritance, as opposed to public inheritance,  models which type of relationship in C++?  
-==================================================================  
-A.  Has-a  
-B.  Is-implemented-in-terms-of  
-C.  Was-a  
-D.  Can-only-have-one-of  
-E.  Shares-a-relationship-with
+ANSWER: B
 
-Question 36: A class der inherits from class base and the functions are defined in  the code below: 
+Question 36: A class der inherits from class base and the functions are defined in the code below: 
 ==================================================================  
 void SomeFunc(base& b){ ... } 
 void SomeFunc(base b){ ... } 
@@ -622,13 +707,16 @@ void main() {
 	SomeFunc(d); 
 } 
 In the call to SomeFunc(d), which of the following overloads of the SomeFunc function will be executed in C++?    
+
 A. void SomeFunc(base& b){ ... }     
 B. The compiler will generate an ambiguous call error.    
 C. void SomeFunc(der& b){ ... }    
 D. void SomeFunc(base b){ ... }    
 E. void SomeFunc(der b){ ... }
 
-Question 36: Which of the following statements regarding functions' default arguments  in C++ are correct? 
+ANSWER: B
+
+Question 36: Which of the following statements regarding functions' default arguments in C++ are correct? 
 ==================================================================   
 A.  Default arguments cannot be of pointer type.  
 B.  Default arguments cannot be of a user-defined type.  
@@ -636,7 +724,9 @@ C.  Default arguments can never precede non-default arguments.
 D.  Default arguments exist in the global heap and not on the function's stack.  
 E.  Default arguments are not considered for generating the function's signature.
 
-Question 37: In C++, which of the following statements regarding the code below are  valid?
+ANSWER: C
+
+Question 37: In C++, which of the following statements regarding the code below are valid?
 ==================================================================
 #include <iostream>   
 class Outer {
@@ -670,7 +760,9 @@ void main() {
  D.  Inner class cannot access its containing class's private members.  
  E.  The output will be:     
 		 10     
-		 5 
+		 5
+		 
+ ANSWER: D
 Question 37: In the declaration below, p is a pointer to an array of 5 int pointers: 
 ==================================================================   
 	int *(*p)[5];   
@@ -681,7 +773,9 @@ B. p = new int [3]*[5];
 C. p = new int *[3][5];    
 D. p = new int [3][5]*;    
 E. p = new int (*[3])[5]; 	 
-		 
+
+ANSWER: C
+
 Question 38: What is the output of the program below in C++? 
 ==================================================================
 #include <iostream> 
@@ -716,6 +810,8 @@ B.  const const mutable const mutable
 C.  mutable const mutable const mutable  
 D.  Undefined behavior  
 E.  Fails to compile
+
+ANSWER: B
 
 Question 39: Which of the following are possible outputs of the C++ code below?
 ==================================================================
@@ -771,8 +867,10 @@ E.
 	const volatile TestPrint 
 	volatile TestPrint  
 	const volatile TestPrint
+	
+ANSWER: C
 
-Question 39: Which of the following statements correctly describe functions of the  endl manipulator for the ostream object cout in C++?   
+Question 39: Which of the following statements correctly describe functions of the endl manipulator for the ostream object cout in C++?   
 ================================================================== 
 A. It puts an end-of-output character into the standard output stream.    
 B. It only flushes the standard output stream.     
@@ -780,6 +878,8 @@ C. It only puts a newline character into the standard output stream.
 D. It puts a newline character into the standard output stream and flushes the standard output stream.     
 E. It indicates end-of-output and closes the standard output stream. 
 	
+ANSWER: D
+
 Question 40: In the declaration below, p is a pointer to an array of 5 int pointers:   
 ================================================================== 
 int *(*p)[5];   
@@ -791,7 +891,9 @@ C.  p = new int [3]*[5];
 D.  p = new int *[3][5];  
 E.  p = new int (*[3])[5];
 
-Question 41: Which of the following operators must be overloaded by function objects  in the Standard Template Library?    
+ANSWER: D
+
+Question 41: Which of the following operators must be overloaded by function objects in the Standard Template Library?    
 ==================================================================
 A.  operator +()  
 B.  operator ++()  
@@ -799,15 +901,9 @@ C.  operator ==()
 D.  operator ()()  
 E.  operator []()
 
-Question 42: Under which of the following conditions will a C++ developer use  polymorphism?  
-==================================================================  
-A. When there is a need for the code written today to call code written tomorrow    
-B. When there is a looping construct that uses a continue more than once    
-C. When there is a need to check for the type of an object to determine which function must be called     
-D. When there is a need to check the value of a variable to determine which of two or more functions to call     
-E. When there is a need to modify the existing interface of a class
+ANSWER: D
 
-Question 42: A C++ developer wants to explicitly specialize the template function  below for the char * type:   template <class T> void fn(T a){...}   	
+Question 42: A C++ developer wants to explicitly specialize the template function below for the char * type: template <class T> void fn(T a){...}   	
 Which of the following methods can the developer use to carry out this specialization?  
 ==================================================================
 A.  void fn<char*>(char* a){...}  
@@ -834,6 +930,8 @@ C. void fn<char*>(T a){...}
 D. void fn<char*>(char* a){...}     
 E. template <class T> void fn<char*>(T a){...}
 
+ANSWER: B (https://www.geeksforgeeks.org/template-specialization-c/)
+
 Question 44: What member function of std::fstream could a C++ developer invoke in  order to change the target output filebuf of the fstream?
 ==================================================================    
 A.  setbuffer  
@@ -842,7 +940,7 @@ C.  rdbuf
 D.  filebuf  
 E.  streambuf
 
-Question 45: Which of the following classes must be instantiated so that the object  can be used both for reading and writing to the same file in C++? 
+Question 45: Which of the following classes must be instantiated so that the object can be used both for reading and writing to the same file in C++? 
 ================================================================== 
 A. stream    
 B. ofstream    
@@ -850,7 +948,9 @@ C. fstream
 D. ifstream    
 E. iostream
 
-Question 45: Which of the following options are returned by the typeid operator in  C++?   
+ANSWER: C
+
+Question 45: Which of the following options are returned by the typeid operator in C++?   
 ==================================================================
 A.  A reference to a const std::type_info object  
 B.  A const std::type_info object  
@@ -858,7 +958,9 @@ C.  A const reference to a const std::type_info object
 D.  A reference to a std::type_info object  
 E.  A const reference to a std::type_info object
 
-Question 46: The code below generates the compiler error "'Derived::data' is  ambiguous". In C++, which of the following steps can be taken to rectify it so that obj has only one instance of data?
+ANSWER: E
+
+Question 46: The code below generates the compiler error "'Derived::data' is ambiguous". In C++, which of the following steps can be taken to rectify it so that obj has only one instance of data?
 ==================================================================
 class Base {
 public:
@@ -877,7 +979,9 @@ C. Inherit classes DerivedOne and DerivedTwo from Base as public virtual Base.
 D. Inherit class Derived from DerivedOne and DerivedTwo as public virtual DerivedOne and public virtual DerivedTwo.     
 E. Inherit either class DerivedOne or class DerivedTwo from Base as virtual public Base
 
-Question 46: Which of the following statements describe correct methods of handling  C++ exceptions?    
+ANSWER: B, C
+
+Question 46: Which of the following statements describe correct methods of handling C++ exceptions?    
 ==================================================================
 A.  Once an exception is thrown, the compiler unwinds the heap, freeing any memory dynamically allocated within the block from which the exception was thrown.   
 B.  In a hierarchy of exception classes, the order of handling exceptions can be from the most specific class to the most general class.   
@@ -885,7 +989,9 @@ C.  If an exception is caught by its address or pointer, it is the responsibilit
 D.  Catching an exception by reference is preferable to catching it by value.  
 E.  To write an exception handler, it is essential to know the concrete class of exception to catch. 
 
-Question 47: Which of the following statements correctly describe functions of the  endl manipulator for the ostream object cout in C++?  
+ANSWER: B, D
+
+Question 47: Which of the following statements correctly describe functions of the endl manipulator for the ostream object cout in C++?  
 ==================================================================  
 A.  It only flushes the standard output stream.  
 B.  It puts a newline character into the standard output stream and flushes the standard output stream.   
@@ -893,7 +999,9 @@ C.  It puts an end-of-output character into the standard output stream.
 D.  It only puts a newline character into the standard output stream.  
 E.  It indicates end-of-output and closes the standard output stream.
 
-Question 48: In C++, which of the following statements accurately describe a base  class destructor calling a virtual function override of a derived class? 
+ANSWER: B
+
+Question 48: In C++, which of the following statements accurately describe a base class destructor calling a virtual function override of a derived class? 
 ==================================================================   
 A.  The base class destructor calls the virtual function override of the derived class through the vtable.   
 B.  The base class destructor cannot call the virtual function override of the derived class because the derived class portion of the data may be in an undefined state.   
@@ -901,10 +1009,17 @@ C.  The base class destructor calls the virtual function of the base class and n
 D.  The C++ compiler maintains the overridden virtual function pointers in a separate structure when it sees the call in a destructor. The call is then resolved through this structure.   
 E.  The language does not permit calling a virtual function override in either a constructor or the destructor of the base class.
 
-Question 48: Which of the following statements correctly describe the C++ language  and its libraries?    
+Question 48: Which of the following statements correctly describe the C++ language and its libraries?    
 ==================================================================
 A. It is possible to declare a function pointer to the constructor of a C++ class.    
 B. Though one can override the << operator of the ostream class, it is not possible to do so for the ofstream class because it does not use a buffered output stream.     
 C. The C++ language does not have built in features for persisting or serializing objects to disk and back.     
 D. It is not possible to declare a pointer to a private data member of a C++ class.    
 E. If the << operator of the ostream class has been templatized, it cannot be specialized. 
+
+
+
+
+
+OTHER NOTES:
+Other practice test: http://www.cplusplus.com/forum/beginner/102348/
