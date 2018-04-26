@@ -8,3 +8,10 @@ What is polymorphism?
 	It is the ability for a method to have different behavior depending on the type of object it is being called on or the type of object passed to it as a parameter. 
 
 *Always consider data type overflow issues.
+
+Disrupts the flow of cin and cout but really boosts performance. 
+int x=[](){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    return 0;
+}();
