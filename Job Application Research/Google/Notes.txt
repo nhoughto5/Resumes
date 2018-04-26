@@ -1,0 +1,10 @@
+Mutex vs Semaphore:
+	Mutex and semaphores are essentially the same thing. They both lock a resource to prevent threads altering them. Mutexes set a flag to one, decrement it when locking and incrementing when unlocking. Sempahores do the same but set the counter to 1 or greater (the number of threads that may access the resource at once).
+
+How do we prevent deadlock?
+	Enforce an order on locks. 
+
+What is polymorphism?
+	It is the ability for a method to have different behavior depending on the type of object it is being called on or the type of object passed to it as a parameter. 
+
+*Always consider data type overflow issues.
