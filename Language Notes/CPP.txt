@@ -7,7 +7,7 @@
 			}
 		};
 		int main() {
-			Base * bp = new Base(); // New returns a reference
+			Base * bp = new Base(); // New returns a pointer to heap allocated instance
 			Base *bp2 = new Base;
 			Base bp3 = Base();
 			Base b;
@@ -93,3 +93,4 @@
 		
 12.) Vtable is a table of function pointers. Once is implemented per class.
 13.) Vptr is a pointer to a Vtable. Maintained per object.
+14.) strlen does not include null termination character
