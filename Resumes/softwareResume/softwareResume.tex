@@ -73,7 +73,7 @@
 	%----------HEADING-----------------
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 		\textbf{\href{http://nickhoughton.ca/}{\Large Nick Houghton}} & Email : \href{mailto:nhoughto5@gmail.com}{nhoughto5@gmail.com}\\
-		\href{http://nickhoughton.ca/}{www.nickhoughton.ca} & Mobile : +1-310-904-3713 \\
+		\href{http://nickhoughton.ca/}{www.nickhoughton.ca} & Mobile : +1-778-868-8315 \\
 	\end{tabular*}
 	\vspace{-10mm}
 	\section{}
@@ -92,16 +92,18 @@
 	\begin{multicols}{4}
 		\begin{itemize}
 			\setlength\itemsep{-2mm}
-			\item OpenGL
-			\item Unreal Engine 4
-			\item Data Structures
 			\item C++
+			\item 3D Mathematics
+			\item Unreal Engine 4
+			\item OpenGL
+			\item Data Structures
 			\item Unity5 \& C\#
-			\item JavaScript
+%			\item JavaScript
 			\item GLSL
-			\item 3D Mathematics 
-			\item Git
+			\item Physics 
+%			\item Git
 			\item Java
+			\item Assembly
 			\item Algorithms
 			\item Vulkan
 		\end{itemize}
@@ -109,15 +111,28 @@
 	%-----------PROJECTS-----------------
 	\section{Projects}
 	\resumeSubHeadingListStart
-		\resumeSubItem{NickEngine: A Vulkan renderer}{}
+	\resumeSubItem{Zombie-Hunt: A first person shooter made with OpenGL and C++}{}
 	\begin{multicols}{2}
 		\begin{itemize}
 			\setlength\itemsep{0em}
-			\item Implemented basic Vulkan renderer
-			\item Discovery, design and ongoing implementation.
-		\end{itemize}	
+			\item Implemented AI enemies
+			%			\item Created weapon animations in \textit{Blender}
+			\item Created a custom renderer
+			%			\item Created a custom .OBJ file importer
+		\end{itemize}
 	\end{multicols}
-\vspace*{-5mm}
+	\vspace*{-5mm}
+	
+%	\resumeSubItem{NickEngine: A Vulkan renderer}{}
+%	\begin{multicols}{2}
+%		\begin{itemize}
+%			\setlength\itemsep{0em}
+%			\item Implemented basic Vulkan renderer
+%			\item Discovery, design and ongoing implementation.
+%		\end{itemize}	
+%	\end{multicols}
+%	\vspace*{-5mm}
+	
 	\resumeSubItem{Dead Earth: A first person shooter using Unity 5 and C\#, Udemy Course}{}
 	\begin{multicols}{2}
 		\begin{itemize}
@@ -126,39 +141,29 @@
 			\item Achieved blood effects with HLSL shaders
 		\end{itemize}	
 	\end{multicols}
-	\vspace*{-5mm}
-	\resumeSubItem{Jump-Ship: A 2D space shooter using Unity 5 and C\#}{}
-	\begin{multicols}{2}
-		\begin{itemize}
-			\setlength\itemsep{0em}
-			\item Created weapon mechanics
-			\item Implemented AI enemies
-		\end{itemize}
-	\end{multicols}
-	\vspace*{-5mm}
-	\resumeSubItem{Unreal Development Online Course}{}
-	\begin{multicols}{2}
-		\begin{itemize}
-			\setlength\itemsep{0em}
-			\item Completed two 3D games with \textbf{UE4}: Building Escape, Battle Tank
-			\item Improved on combat mechanics
-			\item Implemented AI tank enemies
-%			\item Designed a main menu
-%			\item Designed battle landscapes
-			
-		\end{itemize}
-	\end{multicols}
-	\vspace*{-5mm}
-	\resumeSubItem{Zombie-Hunt: A first person shooter made with OpenGL and C++}{}
-	\begin{multicols}{2}
-		\begin{itemize}
-			\setlength\itemsep{0em}
-			\item Implemented AI enemies
-%			\item Created weapon animations in \textit{Blender}
-			\item Created a custom renderer
-%			\item Created a custom .OBJ file importer
-		\end{itemize}
-	\end{multicols}
+%	\vspace*{-5mm}
+%	\resumeSubItem{Jump-Ship: A 2D space shooter using Unity 5 and C\#}{}
+%	\begin{multicols}{2}
+%		\begin{itemize}
+%			\setlength\itemsep{0em}
+%			\item Created weapon mechanics
+%			\item Implemented AI enemies
+%		\end{itemize}
+%	\end{multicols}
+%	\vspace*{-5mm}
+%	\resumeSubItem{Unreal Development Online Course}{}
+%	\begin{multicols}{2}
+%		\begin{itemize}
+%			\setlength\itemsep{0em}
+%			\item Completed two 3D games with \textbf{UE4}: Building Escape, Battle Tank
+%			\item Improved on combat mechanics
+%			\item Implemented AI tank enemies
+%%			\item Designed a main menu
+%%			\item Designed battle landscapes
+%		\end{itemize}
+%	\end{multicols}
+%	\vspace*{-5mm}
+
 	\resumeSubHeadingListEnd
 	
 	
@@ -167,16 +172,27 @@
 	\section{Experience}
 	\resumeSubHeadingListStart
 	
+	%%% EA %%%
+	\resumeSubheading
+	{Electronic Arts}{Burnaby, Canada}
+	{Software Engineer, FIFA Mobile}{August 2018 - Present}
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item Developed and maintained client application with Haxe and C++
+		\item Server Development with Java \& Build system maintenance 
+		\item Artwork and content pipeline integration 
+	\end{itemize}
+	
 	%%% JibJab %%%
 	\resumeSubheading
 	{JibJab Studios}{Marina Del Rey, California}
-	{Software Engineer}{May 2017 - Present}
+	{Software Engineer}{May 2017 - July 2018}
 	\begin{itemize}
 		\setlength\itemsep{0em}
 		\item Developed and maintained a render library in both OpenGL and WebGL
-		\item Artwork and content pipeline integration
+%		\item Artwork and content pipeline integration
 		\item Spearheaded development and operation of a mass gif rendering system using Java and AWS
-		\item Installed render library with EmberJS, React and iOS applications
+%		\item Developed and maintained interface between render library client applications
 		\item Implemented shell scripts to automate render tasks using FFMPEG
 	\end{itemize}
 	
@@ -191,7 +207,16 @@
 		\item Designed and developed user-facing features using Javascript, HTML5 and CSS3.
 	\end{itemize}
 	
-	%%% ONC %%%
+	%%% Uvic TA %%%
+	\resumeSubheading
+	{University of Victoria}{Victoria B.C.}
+	{Teaching Assistant: Embedded Programming}{May 2015 - Dec 2016}
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item Instructed laboratory classes on use and development of assembly language programming
+	\end{itemize}
+	
+	%%% Uvic %%%
 	\resumeSubheading
 	{University of Victoria}{Victoria B.C.}
 	{Hardware Security Fellow}{May 2015 - Dec 2016}
