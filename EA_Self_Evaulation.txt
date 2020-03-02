@@ -1,0 +1,30 @@
+This year I have worked towards following my passion into the Rendering discipline while upholding my responsibility to the client team. I have taken responsibility and ownership over multiple large and complicated technical areas & features; I have demonstrated that I am a competent and effective engineer in both my technical and soft skills.
+
+
+VFX System
+The visual effects system was a newly proposed feature that the production team thought of as an extremely valuable feature that would unfortunately be a large technical investment - one that may not even be achievable. I was able to successfully lead the design and implementation of a robust content driven system that will provide a large revenue generating opportunity that will also make UFCM fun, exciting, and unique in the FUEL catalog. I believe that with this achievement I have demonstrated the following:
+
+Capable of designing and implementing technically complex systems that are valuable to the project
+Leading the development of large multi-team-dependent systems with members of multiple teams
+Able to communicate complicated ideas to engineers, artists and management effectively
+Capable of timely delivery of responsibilities
+Capable and driven to learn new skills from other team members
+Developed strong working relationships with team members both inside and outside of FUEL
+Strong documentation skills that allow easy use for non-technical personnel
+
+
+Asset Integration and Pipeline Development
+I was tasked with implementing a pipeline that could import 3D assets from the CrEAte team into our game quickly and reliably. I was successful in delivering a system that allows smooth and easy iteration for our technical artists and producers. I continue to actively manage it so that updates and changes can be integrated and reviewed on an ongoing basis. 
+
+Demonstrated responsibility for vital aspects of game development
+Can work with team leadership to meet development and managerial needs
+Valuable person of contact for external teams
+
+
+Reliable Client Team Member
+Throughout development, I believe I have been an important member of the client team. I feel that my contribution has aided in the client team being reliable, competent and diligent in quality development. I feel I have had a positive impact in these areas:
+
+I have created several re-usable components that are used by the team throughout the game. This has allowed for well organized, reliable client code that can be written quickly and effectively
+I have reliably delivered or aided in the delivery, of large, complicated features (My Camp, Chat, Store...etc)
+I have demonstrated that I am capable and effective at assisting new team members in not only on-boarding, but feeling like a valued member of the team.
+I have demonstrated strong personal skills that allow me to be an effective member of the larger team. I believe that I am an effective representative of the client team when working with members of other teams (server team, artists, gameplay, production...etc)
