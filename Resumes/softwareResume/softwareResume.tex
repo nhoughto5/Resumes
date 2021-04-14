@@ -36,6 +36,11 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+\usepackage{hyperref}
+\usepackage{xcolor}
+\newcommand{\link}[2]{{\color{blue}\href{#1}{#2}}}
+
+
 % Sections formatting
 \titleformat{\section}{
 	\vspace{-4pt}\scshape\raggedright\large
@@ -123,7 +128,7 @@
 %	\end{multicols}
 %	\vspace*{-5mm}
 	
-	\resumeSubItem{OpenGLRenderer, \& Vulkan Renderer}{}
+	\resumeSubItem{\link{https://github.com/nhoughto5/OpenGLRenderer}{OpenGLRenderer}, \&  \link{https://github.com/nhoughto5/NeatoVulkanRenderer}{Vulkan Renderer}}{}
 	\begin{multicols}{2}
 		\begin{itemize}
 			\setlength\itemsep{0em}
@@ -131,19 +136,23 @@
 %			\item Both OpenGL and Vulkan Renderer
 %			\item Advanced rendering techniques
 			\item Modern graphics APIs
+			\item Shadow Mapping
+			\item Instancing
+			\item Blinn-Phong Lighting
 			\item OBJ Model Pre-processing
+			\item XML Scene Definition
 		\end{itemize}	
 	\end{multicols}
 	\vspace*{-5mm}
 	
-	\resumeSubItem{On This Spot, historical travel app}{}
-	\begin{multicols}{2}
-		\begin{itemize}
-			\setlength\itemsep{0em}
-			\item Android, iOS \& React Native development
-			\item OpenGL ES
-		\end{itemize}	
-	\end{multicols}
+%	\resumeSubItem{On This Spot, historical travel app}{}
+%	\begin{multicols}{2}
+%		\begin{itemize}
+%			\setlength\itemsep{0em}
+%			\item Android, iOS \& React Native development
+%			\item OpenGL ES
+%		\end{itemize}	
+%	\end{multicols}
 	
 %	\resumeSubItem{Dead Earth: A first person shooter using Unity 5 and C\#, Udemy Course}{}
 %	\begin{multicols}{2}
